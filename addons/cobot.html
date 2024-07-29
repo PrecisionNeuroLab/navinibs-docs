@@ -452,7 +452,7 @@
 </div>
 <section id="install">
 <h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
-<p>Install the <a class="reference external" href="https://github.com/chriscline/NaviNIBS_Cobot">Cobot addon</a> with:</p>
+<p>Install the <a class="reference external" href="https://github.com/PrecisionNeuroLab/NaviNIBS_Cobot">Cobot addon</a> with:</p>
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(NaviNIBS-env)</span><span class="gp">...&gt;</span>pip install navinibs-cobot
 </pre></div>
 </div>
@@ -526,12 +526,23 @@
 </section>
 <section id="network-connections">
 <h3>Network connections<a class="headerlink" href="#network-connections" title="Link to this heading">¶</a></h3>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id1">
 <div class="mermaid">
             flowchart LR
     Camera[NDI camera] --&gt; Cobot
         </div><figcaption>
-<p><span class="caption-text">Standalone Cobot usage without neuronavigation.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Standalone Cobot usage without neuronavigation.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-default" id="id2">
+<div class="mermaid">
+            flowchart LR
+    Camera[NDI camera] --&gt; NaviNIBS &lt;--&gt; Cobot
+        </div><figcaption>
+<p><span class="caption-text">Network connections with two dedicated network ports on NaviNIBS computer.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="line-block">
@@ -539,23 +550,12 @@
 </div>
 <figure class="align-default" id="id3">
 <div class="mermaid">
-            flowchart LR
-    Camera[NDI camera] --&gt; NaviNIBS &lt;--&gt; Cobot
-        </div><figcaption>
-<p><span class="caption-text">Network connections with two dedicated network ports on NaviNIBS computer.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
-</figcaption>
-</figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<figure class="align-default" id="id4">
-<div class="mermaid">
             flowchart TD
     Camera[NDI camera] --&gt; Switch[Ethernet switch]
     NaviNIBS &lt;--&gt; Switch[Ethernet switch]
     Cobot &lt;--&gt; Switch[Ethernet switch]
         </div><figcaption>
-<p><span class="caption-text">Network connections with shared switch (recommended).</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Network connections with shared switch (recommended).</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>During typical Cobot usage without NaviNIBS (or another neuronavigation system), the Cobot may connect to an NDI camera directly over an ethernet connection. However, when NaviNIBS is controlling the Cobot, the Cobot does not need to connect to the NDI camera.</p>
