@@ -1,0 +1,423 @@
+<style type="text/css">
+.tg  {
+    font-family: sans-serif;
+	font-size: smaller;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    padding:5px 4px;
+    word-break:normal;
+}
+.tg th{
+    border: none;
+    font-weight:bold;
+    overflow:hidden;
+    padding:5px 4px;
+    word-break:normal;
+    text-align: left;
+}
+.tg .tg-navinibs{
+    font-size: smaller;
+    background-color:#7777FF22;
+}
+.tg .tg-section-label{
+    border: none;
+    font-weight: bold;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+.tg .tg-cell{
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+.tg .tg-yes{
+    color: #2a5adf;
+}
+.tg .tg-no{
+    color: #b30000;
+}
+.tg .tg-partial{
+    color: #ce5c00;
+}
+.tg .tg-question{
+    color: #999999;
+}
+.tg .tg-feature{
+    text-align: left;
+    border: none;
+    border-left: solid thin;
+}
+.tg .tr-boundary {
+  border-top: solid;
+}
+.tg-legend {
+  border: solid
+}
+.tg-legend .tg-legend-label {
+  border: none;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+
+
+<div class="clearfix">
+<table class="tg" style="float: left;">
+<thead>
+  <tr>
+    <th class="tg-section-label"> </th>
+    <th class="tg-feature">Feature</th>
+    <th class="tg-navinibs">NaviNIBS</th>
+    <th class="tg">Brainsight</th>
+    <th class="tg">Localite</th>
+    <th class="tg">Nexstim</th>
+    <th class="tg">visor2</th>
+    <th class="tg">InVesalius</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="3">Software</td>
+    <td class="tg-feature">Open source</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Commercial support</td>
+    <td class="tg-cell tg-no tg-navinibs">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Extensible with addons</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="5">Imaging data</td>
+    <td class="tg-feature">MRI import</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Integrated image segmentation</td>
+    <td class="tg-cell tg-no tg-navinibs">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">SimNIBS head model import</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">fMRI overlay visualization</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">DTI visualization</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="4">Targets</td>
+    <td class="tg-feature">Create planned targets</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Import planned targets</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-question">?</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-question">?</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Create grid of targets</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">E-field modeling</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="5">Tracking</td>
+    <td class="tg-feature">NDI Polaris camera support</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">OptiTrack camera support</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Other tracking systems support</td>
+    <td class="tg-cell tg-partial tg-navinibs">&#x2248;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Coil calibration</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Pointer calibration</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="5">Registration</td>
+    <td class="tg-feature">Autoset planned fiducials</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Fiducial registration</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Head points refinement</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Sample point re-registration</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Template anatomy warping</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="4">Navigation</td>
+    <td class="tg-feature">Real-time pose error metrics</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Stimulation-triggered sampling</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">API control of targeting</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Real-time data streaming out</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-question">?</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="4">Ephys.</td>
+    <td class="tg-feature">EEG electrode digitization</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">EMG response visualization</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Automated thresholding</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">EEG response visualization</td>
+    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr class="tr-boundary">
+    <td class="tg-section-label" rowspan="3">Robot</td>
+    <td class="tg-feature">Basic cobot control</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-yes">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Advanced cobot control</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+  </tr>
+  <tr>
+    <td class="tg-feature">Other robot control</td>
+    <td class="tg-cell tg-no tg-navinibs">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-no">&#10006;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+    <td class="tg-cell tg-partial">&#x2248;</td>
+  </tr>
+</tbody>
+</table>
+
+<table class="tg tg-legend" style="float: left; margin-left: 1em">
+<tbody>
+  <tr>
+      <td class="tg-cell tg-yes">&#10004;</td>
+      <td class="tg-legend-label">Supported</td>
+  </tr>
+  <tr>
+      <td class="tg-cell">&#128339;</td>
+      <td class="tg-legend-label">Planned</td>
+  </tr>
+  <tr>
+      <td class="tg-cell tg-partial">&#x2248;</td>
+      <td class="tg-legend-label">Partial</td>
+  </tr>
+  <tr>
+      <td class="tg-cell tg-no">&#10006;</td>
+      <td class="tg-legend-label">Not supported</td>
+  </tr>
+  <tr>
+      <td class="tg-cell tg-question">?</td>
+      <td class="tg-legend-label">Unknown</td>
+  </tr>
+</tbody>
+</table>
+
+</div>
