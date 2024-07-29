@@ -1,0 +1,1126 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="NaviNIBS.Navigator.Model.Addons module" href="NaviNIBS.Navigator.Model.Addons.html" /><link rel="prev" title="NaviNIBS.Navigator.GUI.NavigatorGUI module" href="NaviNIBS.Navigator.GUI.NavigatorGUI.html" />
+
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>NaviNIBS.Navigator.Model package - NaviNIBS documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">NaviNIBS  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/NaviNIBSIcon.svg" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">NaviNIBS  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../featurecomparison.html">Feature comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow.html">Workflow</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setup</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Setup</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/setup-ndi.html">NDI tracking setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/setup-optitrack.html">OptiTrack tracking setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../core/index.html">Core features</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Core features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../core/ToolConfiguration.html">Tool configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/MRI.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/HeadModel.html">Head model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/TargetPlanning.html">Target planning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/SubjectRegistration.html">Subject registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/CoilCalibration.html">Coil calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/BasicNavigation.html">Basic navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/TriggeringConfiguration.html">Triggering configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/ElectrodeDigitization.html">Electrode digitization</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../addons/index.html">Addons</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Addons</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../addons/simulated-tools.html">Simulated tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons/cobot.html">Cobot control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">Data model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing NaviNIBS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">Code</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Code</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="NaviNIBS.html">NaviNIBS package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of NaviNIBS package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.Devices.html">NaviNIBS.Devices package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of NaviNIBS.Devices package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Devices.IGTLinkToolPositionsServer.html">NaviNIBS.Devices.IGTLinkToolPositionsServer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Devices.ToolPositionsClient.html">NaviNIBS.Devices.ToolPositionsClient module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Devices.ToolPositionsServer.html">NaviNIBS.Devices.ToolPositionsServer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current has-children"><a class="reference internal" href="NaviNIBS.Navigator.html">NaviNIBS.Navigator package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.html">NaviNIBS.Navigator.GUI package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.html">NaviNIBS.Navigator.GUI.CollectionModels package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.CollectionModels package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.DigitizedLocationsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.DigitizedLocationsTableModel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.FiducialsTableModels.html">NaviNIBS.Navigator.GUI.CollectionModels.FiducialsTableModels module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.HeadPointsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.HeadPointsTableModel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.HotkeysTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.HotkeysTableModel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.SamplesTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.SamplesTableModel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.TargetsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.TargetsTableModel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.ToolsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.ToolsTableModel module</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.html">NaviNIBS.Navigator.GUI.EditWindows package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.EditWindows package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.PointerCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.PointerCalibrationWindow module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow module</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.html">NaviNIBS.Navigator.GUI.ViewPanels package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l7 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.MeshSurfaceLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.MeshSurfaceLayer module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.OrientationsLayers.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.OrientationsLayers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.PlotLayersGroup.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.PlotLayersGroup module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.SampleMetadataOrientationsLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.SampleMetadataOrientationsLayer module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingAngleErrorLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingAngleErrorLayer module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingCrosshairsLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingCrosshairsLayer module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingErrorLineLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingErrorLineLayer module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingPointLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.TargetingPointLayer module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigatePanel.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigatePanel module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView module</a></li>
+</ul>
+</li>
+<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.HotkeyTriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.HotkeyTriggerSourceSettingsWidget module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.LSLTriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.LSLTriggerSourceSettingsWidget module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.TriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.TriggerSourceSettingsWidget module</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.CameraPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.CameraPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.CoordinateSystemsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.CoordinateSystemsPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.DigitizeLocationsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.DigitizeLocationsPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.FiducialsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.FiducialsPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.HeadModelPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.HeadModelPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.MRIPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.MRIPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.MainViewPanelWithDockWidgets.html">NaviNIBS.Navigator.GUI.ViewPanels.MainViewPanelWithDockWidgets module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.SubjectRegistrationPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.SubjectRegistrationPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TargetsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.TargetsPanel module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel module</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.html">NaviNIBS.Navigator.GUI.Widgets package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.Widgets package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.CollectionTableWidget.html">NaviNIBS.Navigator.GUI.Widgets.CollectionTableWidget module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.EditGridWidget.html">NaviNIBS.Navigator.GUI.Widgets.EditGridWidget module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.EditTargetWidget.html">NaviNIBS.Navigator.GUI.Widgets.EditTargetWidget module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.MRIViews.html">NaviNIBS.Navigator.GUI.Widgets.MRIViews module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.SurfViews.html">NaviNIBS.Navigator.GUI.Widgets.SurfViews module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.TrackingStatusWidget.html">NaviNIBS.Navigator.GUI.Widgets.TrackingStatusWidget module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.GUI.NavigatorGUI.html">NaviNIBS.Navigator.GUI.NavigatorGUI module</a></li>
+</ul>
+</li>
+<li class="toctree-l4 current has-children current-page"><a class="current reference internal" href="#">NaviNIBS.Navigator.Model package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.Model package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html">NaviNIBS.Navigator.Model.Addons module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html">NaviNIBS.Navigator.Model.Calculations module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html">NaviNIBS.Navigator.Model.CoordinateSystems module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html">NaviNIBS.Navigator.Model.DigitizedLocations module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html">NaviNIBS.Navigator.Model.DockWidgetLayouts module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html">NaviNIBS.Navigator.Model.GenericCollection module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html">NaviNIBS.Navigator.Model.HeadModel module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html">NaviNIBS.Navigator.Model.MRI module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html">NaviNIBS.Navigator.Model.Samples module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html">NaviNIBS.Navigator.Model.Session module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html">NaviNIBS.Navigator.Model.SubjectRegistration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html">NaviNIBS.Navigator.Model.Targets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html">NaviNIBS.Navigator.Model.Tools module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html">NaviNIBS.Navigator.Model.Triggering module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Navigator.TargetingCoordinator.html">NaviNIBS.Navigator.TargetingCoordinator module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.util.html">NaviNIBS.util package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of NaviNIBS.util package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.GUI.html">NaviNIBS.util.GUI package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.GUI package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.Dock.html">NaviNIBS.util.GUI.Dock module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.ErrorDialog.html">NaviNIBS.util.GUI.ErrorDialog module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.IconWidget.html">NaviNIBS.util.GUI.IconWidget module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QAppWithAsyncioLoop.html">NaviNIBS.util.GUI.QAppWithAsyncioLoop module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QCollapsibleSection.html">NaviNIBS.util.GUI.QCollapsibleSection module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QDial.html">NaviNIBS.util.GUI.QDial module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QFileSelectWidget.html">NaviNIBS.util.GUI.QFileSelectWidget module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QFlowLayout.html">NaviNIBS.util.GUI.QFlowLayout module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QLineEdit.html">NaviNIBS.util.GUI.QLineEdit module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QMouseWheelAdjustmentGuard.html">NaviNIBS.util.GUI.QMouseWheelAdjustmentGuard module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QScrollContainer.html">NaviNIBS.util.GUI.QScrollContainer module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QTableWidgetDragRows.html">NaviNIBS.util.GUI.QTableWidgetDragRows module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QValidators.html">NaviNIBS.util.GUI.QValidators module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QWidgetWithCloseSignal.html">NaviNIBS.util.GUI.QWidgetWithCloseSignal module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QueuedRedrawMixin.html">NaviNIBS.util.GUI.QueuedRedrawMixin module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.StyleSheets.html">NaviNIBS.util.GUI.StyleSheets module</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.lsl.html">NaviNIBS.util.lsl package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.lsl package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.lsl.LSLStreamResolver.html">NaviNIBS.util.lsl.LSLStreamResolver module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.lsl.LSLStreamSelector.html">NaviNIBS.util.lsl.LSLStreamSelector module</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.html">NaviNIBS.util.pyvista package</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.pyvista package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.html">NaviNIBS.util.pyvista.RemotePlotting package</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.pyvista.RemotePlotting package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotter.html">NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotter module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies.html">NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.html">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.Asyncio.html">NaviNIBS.util.Asyncio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.CoilOrientations.html">NaviNIBS.util.CoilOrientations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.Signaler.html">NaviNIBS.util.Signaler module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.Transforms.html">NaviNIBS.util.Transforms module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.ZMQAsyncioFix.html">NaviNIBS.util.ZMQAsyncioFix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/PrecisionNeuroLab/NaviNIBS">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://precisionneuro.stanford.edu">Precision Neurotherapeutics Lab</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/source/NaviNIBS.Navigator.Model.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="module-NaviNIBS.Navigator.Model">
+<span id="navinibs-navigator-model-package"></span><h1>NaviNIBS.Navigator.Model package<a class="headerlink" href="#module-NaviNIBS.Navigator.Model" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html">NaviNIBS.Navigator.Model.Addons module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonSessionConfig"><code class="docutils literal notranslate"><span class="pre">AddonSessionConfig</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonSessionConfig.sigConfigAboutToChange"><code class="docutils literal notranslate"><span class="pre">AddonSessionConfig.sigConfigAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonSessionConfig.sigConfigChanged"><code class="docutils literal notranslate"><span class="pre">AddonSessionConfig.sigConfigChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonSessionConfig.asDict"><code class="docutils literal notranslate"><span class="pre">AddonSessionConfig.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonSessionConfig.fromDict"><code class="docutils literal notranslate"><span class="pre">AddonSessionConfig.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement"><code class="docutils literal notranslate"><span class="pre">AddonClassElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement._ClassName"><code class="docutils literal notranslate"><span class="pre">AddonClassElement._ClassName</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement._importModule"><code class="docutils literal notranslate"><span class="pre">AddonClassElement._importModule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement._key"><code class="docutils literal notranslate"><span class="pre">AddonClassElement._key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.isBuiltIn"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.isBuiltIn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.key"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.ClassName"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.ClassName</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.importModule"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.importModule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.Class"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.Class</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.reload"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.reload()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.asDict"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement.fromDict"><code class="docutils literal notranslate"><span class="pre">AddonClassElement.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonExtra"><code class="docutils literal notranslate"><span class="pre">AddonExtra</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonExtra._navigatorGUI"><code class="docutils literal notranslate"><span class="pre">AddonExtra._navigatorGUI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonExtra._session"><code class="docutils literal notranslate"><span class="pre">AddonExtra._session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon"><code class="docutils literal notranslate"><span class="pre">Addon</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._addonInstallPath"><code class="docutils literal notranslate"><span class="pre">Addon._addonInstallPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._addonVersion"><code class="docutils literal notranslate"><span class="pre">Addon._addonVersion</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._MainViewPanels"><code class="docutils literal notranslate"><span class="pre">Addon._MainViewPanels</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._NavigationViews"><code class="docutils literal notranslate"><span class="pre">Addon._NavigationViews</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._NavigationViewLayers"><code class="docutils literal notranslate"><span class="pre">Addon._NavigationViewLayers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._Extras"><code class="docutils literal notranslate"><span class="pre">Addon._Extras</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._SessionAttrs"><code class="docutils literal notranslate"><span class="pre">Addon._SessionAttrs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._sessionAttrs"><code class="docutils literal notranslate"><span class="pre">Addon._sessionAttrs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.MainViewPanels"><code class="docutils literal notranslate"><span class="pre">Addon.MainViewPanels</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.addonInstallPath"><code class="docutils literal notranslate"><span class="pre">Addon.addonInstallPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.SessionAttrs"><code class="docutils literal notranslate"><span class="pre">Addon.SessionAttrs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.needsToInstantiateExtras"><code class="docutils literal notranslate"><span class="pre">Addon.needsToInstantiateExtras</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.instantiateExtras"><code class="docutils literal notranslate"><span class="pre">Addon.instantiateExtras()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.asDict"><code class="docutils literal notranslate"><span class="pre">Addon.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.getConfigFilename"><code class="docutils literal notranslate"><span class="pre">Addon.getConfigFilename()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.writeConfig"><code class="docutils literal notranslate"><span class="pre">Addon.writeConfig()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon.fromDict"><code class="docutils literal notranslate"><span class="pre">Addon.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addons"><code class="docutils literal notranslate"><span class="pre">Addons</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addons.asList"><code class="docutils literal notranslate"><span class="pre">Addons.asList()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addons.fromList"><code class="docutils literal notranslate"><span class="pre">Addons.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html">NaviNIBS.Navigator.Model.Calculations module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html#NaviNIBS.Navigator.Model.Calculations.getClosestPointToPointOnMesh"><code class="docutils literal notranslate"><span class="pre">getClosestPointToPointOnMesh()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html#NaviNIBS.Navigator.Model.Calculations.calculateMidlineRefDirectionsFromCoilToMRITransf"><code class="docutils literal notranslate"><span class="pre">calculateMidlineRefDirectionsFromCoilToMRITransf()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html#NaviNIBS.Navigator.Model.Calculations.calculateAngleFromMidlineFromCoilToMRITransf"><code class="docutils literal notranslate"><span class="pre">calculateAngleFromMidlineFromCoilToMRITransf()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html#NaviNIBS.Navigator.Model.Calculations.calculateCoilToMRITransfFromTargetEntryAngle"><code class="docutils literal notranslate"><span class="pre">calculateCoilToMRITransfFromTargetEntryAngle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html">NaviNIBS.Navigator.Model.CoordinateSystems module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem._description"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem._description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem._isVisible"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem._isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem._isAutogenerated"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem._isAutogenerated</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem._session"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem._session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.description"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.session"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.isVisible"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.isAutogenerated"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.isAutogenerated</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.transformFromWorldToThis"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.transformFromWorldToThis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.transformFromThisToWorld"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.transformFromThisToWorld()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystem.asDict"><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.asDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem._transfThisToWorld"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem._transfThisToWorld</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem._transfWorldToThis"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem._transfWorldToThis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem.transfThisToWorld"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem.transfThisToWorld</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem.transfWorldToThis"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem.transfWorldToThis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem.clearCache"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem.clearCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem.transformFromWorldToThis"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem.transformFromWorldToThis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.AffineTransformedCoordinateSystem.transformFromThisToWorld"><code class="docutils literal notranslate"><span class="pre">AffineTransformedCoordinateSystem.transformFromThisToWorld()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem._deformationFieldThisToWorld_filepath"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem._deformationFieldThisToWorld_filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem._deformationFieldWorldToThis_filepath"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem._deformationFieldWorldToThis_filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.deformationFieldThisToWorld"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.deformationFieldThisToWorld</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.deformationFieldWorldToThis"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.deformationFieldWorldToThis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.transfThisToWorld"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.transfThisToWorld</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.transfWorldToThis"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.transfWorldToThis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.clearCache"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.clearCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.transformFromWorldToThis"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.transformFromWorldToThis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.NonlinearTransformedCoordinateSystem.transformFromThisToWorld"><code class="docutils literal notranslate"><span class="pre">NonlinearTransformedCoordinateSystem.transformFromThisToWorld()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems._session"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems._session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems.session"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems.session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems.autogenerateCoordinateSystems"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems.autogenerateCoordinateSystems()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems.asList"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems.asList()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems.fromList"><code class="docutils literal notranslate"><span class="pre">CoordinateSystems.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html">NaviNIBS.Navigator.Model.DigitizedLocations module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation._plannedCoord"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation._plannedCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation._plannedCoordSpace"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation._plannedCoordSpace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation._sampledCoord"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation._sampledCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation._type"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation._type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation._color"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation._color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.plannedCoord"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.plannedCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.plannedCoordSpace"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.plannedCoordSpace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.sampledCoord"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.sampledCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.type"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.color"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.asDict"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocation.fromDict"><code class="docutils literal notranslate"><span class="pre">DigitizedLocation.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocations"><code class="docutils literal notranslate"><span class="pre">DigitizedLocations</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocations.loadFromXML"><code class="docutils literal notranslate"><span class="pre">DigitizedLocations.loadFromXML()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DigitizedLocations.html#NaviNIBS.Navigator.Model.DigitizedLocations.DigitizedLocations.fromList"><code class="docutils literal notranslate"><span class="pre">DigitizedLocations.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html">NaviNIBS.Navigator.Model.DockWidgetLayouts module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout._affinities"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout._affinities</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout._state"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout._state</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout._winSize"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout._winSize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout.affinities"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout.affinities</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout.state"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout.state</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayout.winSize"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayout.winSize</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayouts"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayouts</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.DockWidgetLayouts.html#NaviNIBS.Navigator.Model.DockWidgetLayouts.DockWidgetLayouts.fromList"><code class="docutils literal notranslate"><span class="pre">DockWidgetLayouts.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html">NaviNIBS.Navigator.Model.GenericCollection module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.sigKeyAboutToChange"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.sigKeyAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.sigKeyChanged"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.sigKeyChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.sigItemAboutToChange"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.sigItemAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.sigItemChanged"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.sigItemChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.key"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.asDict"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollectionDictItem.fromDict"><code class="docutils literal notranslate"><span class="pre">GenericCollectionDictItem.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection"><code class="docutils literal notranslate"><span class="pre">GenericCollection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.sigItemsAboutToChange"><code class="docutils literal notranslate"><span class="pre">GenericCollection.sigItemsAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.sigItemsChanged"><code class="docutils literal notranslate"><span class="pre">GenericCollection.sigItemsChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.sigItemKeyAboutToChange"><code class="docutils literal notranslate"><span class="pre">GenericCollection.sigItemKeyAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.sigItemKeyChanged"><code class="docutils literal notranslate"><span class="pre">GenericCollection.sigItemKeyChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.addItem"><code class="docutils literal notranslate"><span class="pre">GenericCollection.addItem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.deleteItem"><code class="docutils literal notranslate"><span class="pre">GenericCollection.deleteItem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.deleteItems"><code class="docutils literal notranslate"><span class="pre">GenericCollection.deleteItems()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.setItem"><code class="docutils literal notranslate"><span class="pre">GenericCollection.setItem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.setItems"><code class="docutils literal notranslate"><span class="pre">GenericCollection.setItems()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.setAttribForItems"><code class="docutils literal notranslate"><span class="pre">GenericCollection.setAttribForItems()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.keys"><code class="docutils literal notranslate"><span class="pre">GenericCollection.keys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.items"><code class="docutils literal notranslate"><span class="pre">GenericCollection.items()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.get"><code class="docutils literal notranslate"><span class="pre">GenericCollection.get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.values"><code class="docutils literal notranslate"><span class="pre">GenericCollection.values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.merge"><code class="docutils literal notranslate"><span class="pre">GenericCollection.merge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.asList"><code class="docutils literal notranslate"><span class="pre">GenericCollection.asList()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.fromList"><code class="docutils literal notranslate"><span class="pre">GenericCollection.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html">NaviNIBS.Navigator.Model.HeadModel module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel"><code class="docutils literal notranslate"><span class="pre">HeadModel</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel._filepath"><code class="docutils literal notranslate"><span class="pre">HeadModel._filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.sigFilepathChanged"><code class="docutils literal notranslate"><span class="pre">HeadModel.sigFilepathChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.sigDataChanged"><code class="docutils literal notranslate"><span class="pre">HeadModel.sigDataChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.skinSurfPath"><code class="docutils literal notranslate"><span class="pre">HeadModel.skinSurfPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.csfSurfPath"><code class="docutils literal notranslate"><span class="pre">HeadModel.csfSurfPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.gmSurfPath"><code class="docutils literal notranslate"><span class="pre">HeadModel.gmSurfPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.loadCache"><code class="docutils literal notranslate"><span class="pre">HeadModel.loadCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.clearCache"><code class="docutils literal notranslate"><span class="pre">HeadModel.clearCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.filepath"><code class="docutils literal notranslate"><span class="pre">HeadModel.filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.isSet"><code class="docutils literal notranslate"><span class="pre">HeadModel.isSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.surfKeys"><code class="docutils literal notranslate"><span class="pre">HeadModel.surfKeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.gmSurf"><code class="docutils literal notranslate"><span class="pre">HeadModel.gmSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.gmSimpleSurf"><code class="docutils literal notranslate"><span class="pre">HeadModel.gmSimpleSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.csfSurf"><code class="docutils literal notranslate"><span class="pre">HeadModel.csfSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.skinSurf"><code class="docutils literal notranslate"><span class="pre">HeadModel.skinSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.skinSimpleSurf"><code class="docutils literal notranslate"><span class="pre">HeadModel.skinSimpleSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.eegPositions"><code class="docutils literal notranslate"><span class="pre">HeadModel.eegPositions</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.asDict"><code class="docutils literal notranslate"><span class="pre">HeadModel.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.fromDict"><code class="docutils literal notranslate"><span class="pre">HeadModel.fromDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.validateFilepath"><code class="docutils literal notranslate"><span class="pre">HeadModel.validateFilepath()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html">NaviNIBS.Navigator.Model.MRI module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI"><code class="docutils literal notranslate"><span class="pre">MRI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._filepath"><code class="docutils literal notranslate"><span class="pre">MRI._filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigFilepathChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigFilepathChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigDataChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigDataChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.loadCache"><code class="docutils literal notranslate"><span class="pre">MRI.loadCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clearCache"><code class="docutils literal notranslate"><span class="pre">MRI.clearCache()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.filepath"><code class="docutils literal notranslate"><span class="pre">MRI.filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.isSet"><code class="docutils literal notranslate"><span class="pre">MRI.isSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.data"><code class="docutils literal notranslate"><span class="pre">MRI.data</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.dataAsUniformGrid"><code class="docutils literal notranslate"><span class="pre">MRI.dataAsUniformGrid</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.asDict"><code class="docutils literal notranslate"><span class="pre">MRI.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.fromDict"><code class="docutils literal notranslate"><span class="pre">MRI.fromDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.validateFilepath"><code class="docutils literal notranslate"><span class="pre">MRI.validateFilepath()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html">NaviNIBS.Navigator.Model.Samples module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample"><code class="docutils literal notranslate"><span class="pre">Sample</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._timestamp"><code class="docutils literal notranslate"><span class="pre">Sample._timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._coilToMRITransf"><code class="docutils literal notranslate"><span class="pre">Sample._coilToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._targetKey"><code class="docutils literal notranslate"><span class="pre">Sample._targetKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._coilKey"><code class="docutils literal notranslate"><span class="pre">Sample._coilKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._isVisible"><code class="docutils literal notranslate"><span class="pre">Sample._isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._isSelected"><code class="docutils literal notranslate"><span class="pre">Sample._isSelected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._color"><code class="docutils literal notranslate"><span class="pre">Sample._color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample._metadata"><code class="docutils literal notranslate"><span class="pre">Sample._metadata</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.timestamp"><code class="docutils literal notranslate"><span class="pre">Sample.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.coilToMRITransf"><code class="docutils literal notranslate"><span class="pre">Sample.coilToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.hasTransf"><code class="docutils literal notranslate"><span class="pre">Sample.hasTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.targetKey"><code class="docutils literal notranslate"><span class="pre">Sample.targetKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.coilKey"><code class="docutils literal notranslate"><span class="pre">Sample.coilKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.isVisible"><code class="docutils literal notranslate"><span class="pre">Sample.isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.isSelected"><code class="docutils literal notranslate"><span class="pre">Sample.isSelected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.color"><code class="docutils literal notranslate"><span class="pre">Sample.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.metadata"><code class="docutils literal notranslate"><span class="pre">Sample.metadata</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.changingMetadata"><code class="docutils literal notranslate"><span class="pre">Sample.changingMetadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.asDict"><code class="docutils literal notranslate"><span class="pre">Sample.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Sample.fromDict"><code class="docutils literal notranslate"><span class="pre">Sample.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Samples"><code class="docutils literal notranslate"><span class="pre">Samples</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Samples.getUniqueSampleKey"><code class="docutils literal notranslate"><span class="pre">Samples.getUniqueSampleKey()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Samples.setWhichSamplesVisible"><code class="docutils literal notranslate"><span class="pre">Samples.setWhichSamplesVisible()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Samples.setWhichSamplesSelected"><code class="docutils literal notranslate"><span class="pre">Samples.setWhichSamplesSelected()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.Samples.fromList"><code class="docutils literal notranslate"><span class="pre">Samples.fromList()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Samples.html#NaviNIBS.Navigator.Model.Samples.getSampleTimestampNow"><code class="docutils literal notranslate"><span class="pre">getSampleTimestampNow()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html">NaviNIBS.Navigator.Model.Session module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.MNIRegistration"><code class="docutils literal notranslate"><span class="pre">MNIRegistration</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.MNIRegistration.sigTransformChanged"><code class="docutils literal notranslate"><span class="pre">MNIRegistration.sigTransformChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session"><code class="docutils literal notranslate"><span class="pre">Session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._filepath"><code class="docutils literal notranslate"><span class="pre">Session._filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._subjectID"><code class="docutils literal notranslate"><span class="pre">Session._subjectID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._sessionID"><code class="docutils literal notranslate"><span class="pre">Session._sessionID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._MRI"><code class="docutils literal notranslate"><span class="pre">Session._MRI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._headModel"><code class="docutils literal notranslate"><span class="pre">Session._headModel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._subjectRegistration"><code class="docutils literal notranslate"><span class="pre">Session._subjectRegistration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._coordinateSystems"><code class="docutils literal notranslate"><span class="pre">Session._coordinateSystems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._targets"><code class="docutils literal notranslate"><span class="pre">Session._targets</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._tools"><code class="docutils literal notranslate"><span class="pre">Session._tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._samples"><code class="docutils literal notranslate"><span class="pre">Session._samples</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._digitizedLocations"><code class="docutils literal notranslate"><span class="pre">Session._digitizedLocations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._triggerSources"><code class="docutils literal notranslate"><span class="pre">Session._triggerSources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._dockWidgetLayouts"><code class="docutils literal notranslate"><span class="pre">Session._dockWidgetLayouts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._addons"><code class="docutils literal notranslate"><span class="pre">Session._addons</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.sigInfoChanged"><code class="docutils literal notranslate"><span class="pre">Session.sigInfoChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.sigDirtyKeysChanged"><code class="docutils literal notranslate"><span class="pre">Session.sigDirtyKeysChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.subjectID"><code class="docutils literal notranslate"><span class="pre">Session.subjectID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.sessionID"><code class="docutils literal notranslate"><span class="pre">Session.sessionID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.filepath"><code class="docutils literal notranslate"><span class="pre">Session.filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.MRI"><code class="docutils literal notranslate"><span class="pre">Session.MRI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.headModel"><code class="docutils literal notranslate"><span class="pre">Session.headModel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.coordinateSystems"><code class="docutils literal notranslate"><span class="pre">Session.coordinateSystems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.digitizedLocations"><code class="docutils literal notranslate"><span class="pre">Session.digitizedLocations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.subjectRegistration"><code class="docutils literal notranslate"><span class="pre">Session.subjectRegistration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.targets"><code class="docutils literal notranslate"><span class="pre">Session.targets</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.samples"><code class="docutils literal notranslate"><span class="pre">Session.samples</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.tools"><code class="docutils literal notranslate"><span class="pre">Session.tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.triggerSources"><code class="docutils literal notranslate"><span class="pre">Session.triggerSources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.dockWidgetLayouts"><code class="docutils literal notranslate"><span class="pre">Session.dockWidgetLayouts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.addons"><code class="docutils literal notranslate"><span class="pre">Session.addons</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.compressedFileIsDirty"><code class="docutils literal notranslate"><span class="pre">Session.compressedFileIsDirty</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.unpackedSessionDir"><code class="docutils literal notranslate"><span class="pre">Session.unpackedSessionDir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.beautifier"><code class="docutils literal notranslate"><span class="pre">Session.beautifier</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.flagKeyAsDirty"><code class="docutils literal notranslate"><span class="pre">Session.flagKeyAsDirty()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.dirtyKeys"><code class="docutils literal notranslate"><span class="pre">Session.dirtyKeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.saveToUnpackedDir"><code class="docutils literal notranslate"><span class="pre">Session.saveToUnpackedDir()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.saveToFile"><code class="docutils literal notranslate"><span class="pre">Session.saveToFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.mergeFromFile"><code class="docutils literal notranslate"><span class="pre">Session.mergeFromFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.createNew"><code class="docutils literal notranslate"><span class="pre">Session.createNew()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.loadFromFile"><code class="docutils literal notranslate"><span class="pre">Session.loadFromFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.loadFromFolder"><code class="docutils literal notranslate"><span class="pre">Session.loadFromFolder()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.loadFromUnpackedDir"><code class="docutils literal notranslate"><span class="pre">Session.loadFromUnpackedDir()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.getTempUnpackDir"><code class="docutils literal notranslate"><span class="pre">Session.getTempUnpackDir()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html">NaviNIBS.Navigator.Model.SubjectRegistration module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial"><code class="docutils literal notranslate"><span class="pre">Fiducial</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial._plannedCoord"><code class="docutils literal notranslate"><span class="pre">Fiducial._plannedCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial._sampledCoords"><code class="docutils literal notranslate"><span class="pre">Fiducial._sampledCoords</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial._sampledCoord"><code class="docutils literal notranslate"><span class="pre">Fiducial._sampledCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial._alignmentWeight"><code class="docutils literal notranslate"><span class="pre">Fiducial._alignmentWeight</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.plannedCoord"><code class="docutils literal notranslate"><span class="pre">Fiducial.plannedCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.sampledCoord"><code class="docutils literal notranslate"><span class="pre">Fiducial.sampledCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.sampledCoords"><code class="docutils literal notranslate"><span class="pre">Fiducial.sampledCoords</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.alignmentWeight"><code class="docutils literal notranslate"><span class="pre">Fiducial.alignmentWeight</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.asDict"><code class="docutils literal notranslate"><span class="pre">Fiducial.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducial.fromDict"><code class="docutils literal notranslate"><span class="pre">Fiducial.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials"><code class="docutils literal notranslate"><span class="pre">Fiducials</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.plannedFiducials"><code class="docutils literal notranslate"><span class="pre">Fiducials.plannedFiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.sampledFiducials"><code class="docutils literal notranslate"><span class="pre">Fiducials.sampledFiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.allSampledFiducials"><code class="docutils literal notranslate"><span class="pre">Fiducials.allSampledFiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.alignmentWeights"><code class="docutils literal notranslate"><span class="pre">Fiducials.alignmentWeights</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.fromList"><code class="docutils literal notranslate"><span class="pre">Fiducials.fromList()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints"><code class="docutils literal notranslate"><span class="pre">HeadPoints</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints._headPoints"><code class="docutils literal notranslate"><span class="pre">HeadPoints._headPoints</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints._alignmentWeights"><code class="docutils literal notranslate"><span class="pre">HeadPoints._alignmentWeights</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.sigHeadpointsAboutToChange"><code class="docutils literal notranslate"><span class="pre">HeadPoints.sigHeadpointsAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.sigHeadpointsChanged"><code class="docutils literal notranslate"><span class="pre">HeadPoints.sigHeadpointsChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.sigAttribsAboutToChange"><code class="docutils literal notranslate"><span class="pre">HeadPoints.sigAttribsAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.sigAttribsChanged"><code class="docutils literal notranslate"><span class="pre">HeadPoints.sigAttribsChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.alignmentWeights"><code class="docutils literal notranslate"><span class="pre">HeadPoints.alignmentWeights</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.append"><code class="docutils literal notranslate"><span class="pre">HeadPoints.append()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.extend"><code class="docutils literal notranslate"><span class="pre">HeadPoints.extend()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.remove"><code class="docutils literal notranslate"><span class="pre">HeadPoints.remove()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.replace"><code class="docutils literal notranslate"><span class="pre">HeadPoints.replace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.clear"><code class="docutils literal notranslate"><span class="pre">HeadPoints.clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.asList"><code class="docutils literal notranslate"><span class="pre">HeadPoints.asList()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.fromList"><code class="docutils literal notranslate"><span class="pre">HeadPoints.fromList()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration._fiducials"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration._fiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration._sampledHeadPoints"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration._sampledHeadPoints</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration._trackerToMRITransf"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration._trackerToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration._fiducialsHistory"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration._fiducialsHistory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration._trackerToMRITransfHistory"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration._trackerToMRITransfHistory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.sigTrackerToMRITransfAboutToChange"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.sigTrackerToMRITransfAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.sigTrackerToMRITransfChanged"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.sigTrackerToMRITransfChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.fiducials"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.fiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.fiducialsHistory"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.fiducialsHistory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.hasMinimumPlannedFiducials"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.hasMinimumPlannedFiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.hasMinimumSampledFiducials"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.hasMinimumSampledFiducials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.sampledHeadPoints"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.sampledHeadPoints</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.trackerToMRITransf"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.trackerToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.trackerToMRITransfHistory"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.trackerToMRITransfHistory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.isRegistered"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.isRegistered</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.approxHeadCenter"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.approxHeadCenter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.asDict"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.fromDict"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.fromDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.getDatetimeFromTimestamp"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.getDatetimeFromTimestamp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.SubjectRegistration.fiducialsEqual"><code class="docutils literal notranslate"><span class="pre">SubjectRegistration.fiducialsEqual()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html">NaviNIBS.Navigator.Model.Targets module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target"><code class="docutils literal notranslate"><span class="pre">Target</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._targetCoord"><code class="docutils literal notranslate"><span class="pre">Target._targetCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._entryCoord"><code class="docutils literal notranslate"><span class="pre">Target._entryCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._angle"><code class="docutils literal notranslate"><span class="pre">Target._angle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._depthOffset"><code class="docutils literal notranslate"><span class="pre">Target._depthOffset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._coilToMRITransf"><code class="docutils literal notranslate"><span class="pre">Target._coilToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._isVisible"><code class="docutils literal notranslate"><span class="pre">Target._isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._isHistorical"><code class="docutils literal notranslate"><span class="pre">Target._isHistorical</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._mayBeADependency"><code class="docutils literal notranslate"><span class="pre">Target._mayBeADependency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._isSelected"><code class="docutils literal notranslate"><span class="pre">Target._isSelected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._color"><code class="docutils literal notranslate"><span class="pre">Target._color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.targetCoord"><code class="docutils literal notranslate"><span class="pre">Target.targetCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.entryCoord"><code class="docutils literal notranslate"><span class="pre">Target.entryCoord</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.angle"><code class="docutils literal notranslate"><span class="pre">Target.angle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.calculatedAngle"><code class="docutils literal notranslate"><span class="pre">Target.calculatedAngle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.depthOffset"><code class="docutils literal notranslate"><span class="pre">Target.depthOffset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.entryCoordPlusDepthOffset"><code class="docutils literal notranslate"><span class="pre">Target.entryCoordPlusDepthOffset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.coilToMRITransf"><code class="docutils literal notranslate"><span class="pre">Target.coilToMRITransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.isVisible"><code class="docutils literal notranslate"><span class="pre">Target.isVisible</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.isHistorical"><code class="docutils literal notranslate"><span class="pre">Target.isHistorical</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.mayBeADependency"><code class="docutils literal notranslate"><span class="pre">Target.mayBeADependency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.isSelected"><code class="docutils literal notranslate"><span class="pre">Target.isSelected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.color"><code class="docutils literal notranslate"><span class="pre">Target.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.session"><code class="docutils literal notranslate"><span class="pre">Target.session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.autosetEntryCoord"><code class="docutils literal notranslate"><span class="pre">Target.autosetEntryCoord()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.asDict"><code class="docutils literal notranslate"><span class="pre">Target.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.fromDict"><code class="docutils literal notranslate"><span class="pre">Target.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets"><code class="docutils literal notranslate"><span class="pre">Targets</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets._session"><code class="docutils literal notranslate"><span class="pre">Targets._session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets.setWhichTargetsVisible"><code class="docutils literal notranslate"><span class="pre">Targets.setWhichTargetsVisible()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets.setWhichTargetsSelected"><code class="docutils literal notranslate"><span class="pre">Targets.setWhichTargetsSelected()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets.session"><code class="docutils literal notranslate"><span class="pre">Targets.session</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Targets.fromList"><code class="docutils literal notranslate"><span class="pre">Targets.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html">NaviNIBS.Navigator.Model.Tools module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool"><code class="docutils literal notranslate"><span class="pre">Tool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._usedFor"><code class="docutils literal notranslate"><span class="pre">Tool._usedFor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._label"><code class="docutils literal notranslate"><span class="pre">Tool._label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._trackerKey"><code class="docutils literal notranslate"><span class="pre">Tool._trackerKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._isActive"><code class="docutils literal notranslate"><span class="pre">Tool._isActive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._doRenderTool"><code class="docutils literal notranslate"><span class="pre">Tool._doRenderTool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._doRenderTracker"><code class="docutils literal notranslate"><span class="pre">Tool._doRenderTracker</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._doShowTrackingState"><code class="docutils literal notranslate"><span class="pre">Tool._doShowTrackingState</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._romFilepath"><code class="docutils literal notranslate"><span class="pre">Tool._romFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._trackerStlFilepath"><code class="docutils literal notranslate"><span class="pre">Tool._trackerStlFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._toolStlFilepath"><code class="docutils literal notranslate"><span class="pre">Tool._toolStlFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._filepathsRelTo"><code class="docutils literal notranslate"><span class="pre">Tool._filepathsRelTo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._toolToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">Tool._toolToTrackerTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._toolStlToToolTransf"><code class="docutils literal notranslate"><span class="pre">Tool._toolStlToToolTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._trackerStlToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">Tool._trackerStlToTrackerTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._toolColor"><code class="docutils literal notranslate"><span class="pre">Tool._toolColor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._trackerColor"><code class="docutils literal notranslate"><span class="pre">Tool._trackerColor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._toolOpacity"><code class="docutils literal notranslate"><span class="pre">Tool._toolOpacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._trackerOpacity"><code class="docutils literal notranslate"><span class="pre">Tool._trackerOpacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._installPath"><code class="docutils literal notranslate"><span class="pre">Tool._installPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._sessionPath"><code class="docutils literal notranslate"><span class="pre">Tool._sessionPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.label"><code class="docutils literal notranslate"><span class="pre">Tool.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.labelIsSet"><code class="docutils literal notranslate"><span class="pre">Tool.labelIsSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerKey"><code class="docutils literal notranslate"><span class="pre">Tool.trackerKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerKeyIsSet"><code class="docutils literal notranslate"><span class="pre">Tool.trackerKeyIsSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.usedFor"><code class="docutils literal notranslate"><span class="pre">Tool.usedFor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.isActive"><code class="docutils literal notranslate"><span class="pre">Tool.isActive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.doRenderTool"><code class="docutils literal notranslate"><span class="pre">Tool.doRenderTool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.doRenderTracker"><code class="docutils literal notranslate"><span class="pre">Tool.doRenderTracker</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.doShowTrackingState"><code class="docutils literal notranslate"><span class="pre">Tool.doShowTrackingState</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.romFilepath"><code class="docutils literal notranslate"><span class="pre">Tool.romFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolStlFilepath"><code class="docutils literal notranslate"><span class="pre">Tool.toolStlFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerStlFilepath"><code class="docutils literal notranslate"><span class="pre">Tool.trackerStlFilepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.filepathsRelTo"><code class="docutils literal notranslate"><span class="pre">Tool.filepathsRelTo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.filepathsRelToKey"><code class="docutils literal notranslate"><span class="pre">Tool.filepathsRelToKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.sessionPath"><code class="docutils literal notranslate"><span class="pre">Tool.sessionPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">Tool.toolToTrackerTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolStlToToolTransf"><code class="docutils literal notranslate"><span class="pre">Tool.toolStlToToolTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerStlToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">Tool.trackerStlToTrackerTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerColor"><code class="docutils literal notranslate"><span class="pre">Tool.trackerColor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolColor"><code class="docutils literal notranslate"><span class="pre">Tool.toolColor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerOpacity"><code class="docutils literal notranslate"><span class="pre">Tool.trackerOpacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolOpacity"><code class="docutils literal notranslate"><span class="pre">Tool.toolOpacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolToTrackerTransfHistory"><code class="docutils literal notranslate"><span class="pre">Tool.toolToTrackerTransfHistory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.trackerSurf"><code class="docutils literal notranslate"><span class="pre">Tool.trackerSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.toolSurf"><code class="docutils literal notranslate"><span class="pre">Tool.toolSurf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.initialTrackerPose"><code class="docutils literal notranslate"><span class="pre">Tool.initialTrackerPose</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.initialTrackerPoseRelativeTo"><code class="docutils literal notranslate"><span class="pre">Tool.initialTrackerPoseRelativeTo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.asDict"><code class="docutils literal notranslate"><span class="pre">Tool.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.fromDict"><code class="docutils literal notranslate"><span class="pre">Tool.fromDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.sigKeyAboutToChange"><code class="docutils literal notranslate"><span class="pre">Tool.sigKeyAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.sigKeyChanged"><code class="docutils literal notranslate"><span class="pre">Tool.sigKeyChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.sigItemAboutToChange"><code class="docutils literal notranslate"><span class="pre">Tool.sigItemAboutToChange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.sigItemChanged"><code class="docutils literal notranslate"><span class="pre">Tool.sigItemChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.SubjectTracker"><code class="docutils literal notranslate"><span class="pre">SubjectTracker</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.SubjectTracker.toolToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">SubjectTracker.toolToTrackerTransf</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.CoilTool"><code class="docutils literal notranslate"><span class="pre">CoilTool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.CoilTool.toolToTrackerTransf"><code class="docutils literal notranslate"><span class="pre">CoilTool.toolToTrackerTransf</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Pointer"><code class="docutils literal notranslate"><span class="pre">Pointer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.CalibrationPlate"><code class="docutils literal notranslate"><span class="pre">CalibrationPlate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._hostname"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._hostname</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._pubPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._pubPort</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._cmdPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._cmdPort</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._type"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._doAutostart"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._doAutostart</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo._initKwargs"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo._initKwargs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.sigInfoChanged"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.sigInfoChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.hostname"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.hostname</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.pubPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.pubPort</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.cmdPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.cmdPort</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.type"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.doAutostart"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.doAutostart</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.initKwargs"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.initKwargs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.asDict"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServerInfo.asDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools"><code class="docutils literal notranslate"><span class="pre">Tools</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools._positionsServerInfo"><code class="docutils literal notranslate"><span class="pre">Tools._positionsServerInfo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools._sessionPath"><code class="docutils literal notranslate"><span class="pre">Tools._sessionPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.sigPositionsServerInfoChanged"><code class="docutils literal notranslate"><span class="pre">Tools.sigPositionsServerInfoChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.addItemFromDict"><code class="docutils literal notranslate"><span class="pre">Tools.addItemFromDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.subjectTracker"><code class="docutils literal notranslate"><span class="pre">Tools.subjectTracker</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.pointer"><code class="docutils literal notranslate"><span class="pre">Tools.pointer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.calibrationPlate"><code class="docutils literal notranslate"><span class="pre">Tools.calibrationPlate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.positionsServerInfo"><code class="docutils literal notranslate"><span class="pre">Tools.positionsServerInfo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.sessionPath"><code class="docutils literal notranslate"><span class="pre">Tools.sessionPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.asList"><code class="docutils literal notranslate"><span class="pre">Tools.asList()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tools.fromList"><code class="docutils literal notranslate"><span class="pre">Tools.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html">NaviNIBS.Navigator.Model.Triggering module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerEvent"><code class="docutils literal notranslate"><span class="pre">TriggerEvent</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerEvent.type"><code class="docutils literal notranslate"><span class="pre">TriggerEvent.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerEvent.time"><code class="docutils literal notranslate"><span class="pre">TriggerEvent.time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerEvent.metadata"><code class="docutils literal notranslate"><span class="pre">TriggerEvent.metadata</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource"><code class="docutils literal notranslate"><span class="pre">TriggerSource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.type"><code class="docutils literal notranslate"><span class="pre">TriggerSource.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource._isEnabled"><code class="docutils literal notranslate"><span class="pre">TriggerSource._isEnabled</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.sigTriggered"><code class="docutils literal notranslate"><span class="pre">TriggerSource.sigTriggered</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.isEnabled"><code class="docutils literal notranslate"><span class="pre">TriggerSource.isEnabled</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.trigger"><code class="docutils literal notranslate"><span class="pre">TriggerSource.trigger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.asDict"><code class="docutils literal notranslate"><span class="pre">TriggerSource.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSource.fromDict"><code class="docutils literal notranslate"><span class="pre">TriggerSource.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.type"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._streamKey"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._streamKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._fallbackTriggerSourceKey"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._fallbackTriggerSourceKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._triggerEvents"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._triggerEvents</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._triggerValueIsEpochID"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._triggerValueIsEpochID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._defaultAction"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._defaultAction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource._minInterTriggerPeriod"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource._minInterTriggerPeriod</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.streamKey"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.streamKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.fallbackTriggerSourceKey"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.fallbackTriggerSourceKey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.triggerEvents"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.triggerEvents</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.triggerValueIsEpochID"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.triggerValueIsEpochID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.defaultAction"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.defaultAction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.minInterTriggerPeriod"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.minInterTriggerPeriod</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.LSLTriggerSource.trigger"><code class="docutils literal notranslate"><span class="pre">LSLTriggerSource.trigger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey"><code class="docutils literal notranslate"><span class="pre">Hotkey</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey._key"><code class="docutils literal notranslate"><span class="pre">Hotkey._key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey._action"><code class="docutils literal notranslate"><span class="pre">Hotkey._action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey._keyboardDeviceID"><code class="docutils literal notranslate"><span class="pre">Hotkey._keyboardDeviceID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey.action"><code class="docutils literal notranslate"><span class="pre">Hotkey.action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkey.keyboardDeviceID"><code class="docutils literal notranslate"><span class="pre">Hotkey.keyboardDeviceID</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkeys"><code class="docutils literal notranslate"><span class="pre">Hotkeys</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.Hotkeys.fromList"><code class="docutils literal notranslate"><span class="pre">Hotkeys.fromList()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource.type"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource._hotkeys"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource._hotkeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource.hotkeys"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource.hotkeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource.asDict"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource.asDict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.HotkeyTriggerSource.fromDict"><code class="docutils literal notranslate"><span class="pre">HotkeyTriggerSource.fromDict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver._key"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver._key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver._minTimeBetweenEvents"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver._minTimeBetweenEvents</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver.sigTriggered"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver.sigTriggered</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver.key"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver.key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerReceiver.trigger"><code class="docutils literal notranslate"><span class="pre">TriggerReceiver.trigger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter"><code class="docutils literal notranslate"><span class="pre">TriggerRouter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.registerReceiver"><code class="docutils literal notranslate"><span class="pre">TriggerRouter.registerReceiver()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.subscribeToTrigger"><code class="docutils literal notranslate"><span class="pre">TriggerRouter.subscribeToTrigger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.unsubscribeFromTrigger"><code class="docutils literal notranslate"><span class="pre">TriggerRouter.unsubscribeFromTrigger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.connectToTriggerSource"><code class="docutils literal notranslate"><span class="pre">TriggerRouter.connectToTriggerSource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.disconnectFromTriggerSource"><code class="docutils literal notranslate"><span class="pre">TriggerRouter.disconnectFromTriggerSource()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSources"><code class="docutils literal notranslate"><span class="pre">TriggerSources</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSources.triggerRouter"><code class="docutils literal notranslate"><span class="pre">TriggerSources.triggerRouter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSources.setItem"><code class="docutils literal notranslate"><span class="pre">TriggerSources.setItem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerSources.fromList"><code class="docutils literal notranslate"><span class="pre">TriggerSources.fromList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="NaviNIBS.Navigator.Model.Addons.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">NaviNIBS.Navigator.Model.Addons module</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="NaviNIBS.Navigator.GUI.NavigatorGUI.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">NaviNIBS.Navigator.GUI.NavigatorGUI module</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Christopher Cline
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">NaviNIBS.Navigator.Model package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=6dbb43f8"></script>
+    </body>
+</html>
