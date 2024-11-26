@@ -379,6 +379,7 @@
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.ticks.html">NaviNIBS.util.pyvista.ticks module</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
@@ -390,6 +391,7 @@
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.logging.html">NaviNIBS.util.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
 </ul>
@@ -659,14 +661,33 @@
 <li class="toctree-l1"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html">NaviNIBS.Navigator.Model.MRI module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI"><code class="docutils literal notranslate"><span class="pre">MRI</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._filepath"><code class="docutils literal notranslate"><span class="pre">MRI._filepath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim2DMin"><code class="docutils literal notranslate"><span class="pre">MRI._clim2DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim2DMax"><code class="docutils literal notranslate"><span class="pre">MRI._clim2DMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim3DMin"><code class="docutils literal notranslate"><span class="pre">MRI._clim3DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim3DMax"><code class="docutils literal notranslate"><span class="pre">MRI._clim3DMax</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigFilepathChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigFilepathChanged</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigDataChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigDataChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigManualClimChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigManualClimChanged</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigClimChanged"><code class="docutils literal notranslate"><span class="pre">MRI.sigClimChanged</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.loadCache"><code class="docutils literal notranslate"><span class="pre">MRI.loadCache()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clearCache"><code class="docutils literal notranslate"><span class="pre">MRI.clearCache()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.filepath"><code class="docutils literal notranslate"><span class="pre">MRI.filepath</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.isSet"><code class="docutils literal notranslate"><span class="pre">MRI.isSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.loadCacheIfNeeded"><code class="docutils literal notranslate"><span class="pre">MRI.loadCacheIfNeeded()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.data"><code class="docutils literal notranslate"><span class="pre">MRI.data</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.dataAsUniformGrid"><code class="docutils literal notranslate"><span class="pre">MRI.dataAsUniformGrid</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.dataToScannerTransf"><code class="docutils literal notranslate"><span class="pre">MRI.dataToScannerTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.scannerToDataTransf"><code class="docutils literal notranslate"><span class="pre">MRI.scannerToDataTransf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2DMin"><code class="docutils literal notranslate"><span class="pre">MRI.clim2DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2DMax"><code class="docutils literal notranslate"><span class="pre">MRI.clim2DMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2D"><code class="docutils literal notranslate"><span class="pre">MRI.clim2D</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3DMin"><code class="docutils literal notranslate"><span class="pre">MRI.clim3DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3DMax"><code class="docutils literal notranslate"><span class="pre">MRI.clim3DMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3D"><code class="docutils literal notranslate"><span class="pre">MRI.clim3D</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim2DMin"><code class="docutils literal notranslate"><span class="pre">MRI.autoClim2DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim2DMax"><code class="docutils literal notranslate"><span class="pre">MRI.autoClim2DMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim3DMin"><code class="docutils literal notranslate"><span class="pre">MRI.autoClim3DMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim3DMax"><code class="docutils literal notranslate"><span class="pre">MRI.autoClim3DMax</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.asDict"><code class="docutils literal notranslate"><span class="pre">MRI.asDict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.fromDict"><code class="docutils literal notranslate"><span class="pre">MRI.fromDict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.validateFilepath"><code class="docutils literal notranslate"><span class="pre">MRI.validateFilepath()</span></code></a></li>

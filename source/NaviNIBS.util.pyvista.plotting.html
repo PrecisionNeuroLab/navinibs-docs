@@ -451,6 +451,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NaviNIBS.util.pyvista.plotting.</span></span><span class="sig-name descname"><span class="pre">PlotterImprovementsMixin</span></span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PlotterImprovementsMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
+<dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.updateScalarBarRangeWithVol">
+<span class="sig-name descname"><span class="pre">updateScalarBarRangeWithVol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PlotterImprovementsMixin.updateScalarBarRangeWithVol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.updateScalarBarRangeWithVol" title="Link to this definition">¶</a></dt>
+<dd><p>Handle manual update of volume scalars that were hard-converted to previous scale within add_volume</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.reset_scalar_bar_ranges">
 <span class="sig-name descname"><span class="pre">reset_scalar_bar_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalarBarTitles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PlotterImprovementsMixin.reset_scalar_bar_ranges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.reset_scalar_bar_ranges" title="Link to this definition">¶</a></dt>
 <dd><p>Fix some issues with update_scalar_bar_ranges and handling of all nan values</p>
@@ -491,6 +497,14 @@
 <span class="sig-name descname"><span class="pre">addMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultMeshColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PlotterImprovementsMixin.addMesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.addMesh" title="Link to this definition">¶</a></dt>
 <dd><p>Wrapper around add_mesh with some extra defaults for things like mesh color handling</p>
 <p>defaultMeshColor: use this if the mesh has no color arrays</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.showGrid">
+<span class="sig-name descname"><span class="pre">showGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_xlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_ylabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_zlabels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PlotterImprovementsMixin.showGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.showGrid" title="Link to this definition">¶</a></dt>
+<dd><p>Similar to show_grid, but simplified and with fixes for tick rounding issues
+introduced in <a class="reference external" href="https://github.com/pyvista/pyvista/commit/344f8388841043e0ff68b5813c4560f55333f057">https://github.com/pyvista/pyvista/commit/344f8388841043e0ff68b5813c4560f55333f057</a>.</p>
+<p>As part of this, specified number of tick marks will be used as a suggestion, but actual number may be different.</p>
 </dd></dl>
 
 </dd></dl>
@@ -667,14 +681,14 @@ and the <code class="docutils literal notranslate"><span class="pre">render_even
 <span class="sig-name descname"><span class="pre">pauseRendering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PrimaryLayeredPlotter.pauseRendering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.pauseRendering" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering">
-<span class="sig-name descname"><span class="pre">resumeRendering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PrimaryLayeredPlotter.resumeRendering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.staticMetaObject">
 <span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">PySide6.QtCore.QMetaObject(&quot;PrimaryLayeredPlotter&quot;</span> <span class="pre">inherits</span> <span class="pre">&quot;BackgroundPlotter&quot;:</span> <span class="pre">)</span></em><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.staticMetaObject" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering">
+<span class="sig-name descname"><span class="pre">resumeRendering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/plotting.html#PrimaryLayeredPlotter.resumeRendering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -870,10 +884,12 @@ mesh.  Then reset the camera and show the mesh.</p>
             <ul>
 <li><a class="reference internal" href="#">NaviNIBS.util.pyvista.plotting module</a><ul>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin</span></code></a><ul>
+<li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.updateScalarBarRangeWithVol"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.updateScalarBarRangeWithVol()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.reset_scalar_bar_ranges"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.reset_scalar_bar_ranges()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.addLineSegments"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.addLineSegments()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.add_axes_marker"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.add_axes_marker()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.addMesh"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.addMesh()</span></code></a></li>
+<li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.showGrid"><code class="docutils literal notranslate"><span class="pre">PlotterImprovementsMixin.showGrid()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.BackgroundPlotter"><code class="docutils literal notranslate"><span class="pre">BackgroundPlotter</span></code></a><ul>
@@ -905,8 +921,8 @@ mesh.  Then reset the camera and show the mesh.</p>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.setLayer"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.setLayer()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.addLayeredPlotter"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.addLayeredPlotter()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.pauseRendering"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.pauseRendering()</span></code></a></li>
-<li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.resumeRendering()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.staticMetaObject"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.staticMetaObject</span></code></a></li>
+<li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.resumeRendering"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.resumeRendering()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.render"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.render()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.set_background"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.set_background()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.enable_depth_peeling"><code class="docutils literal notranslate"><span class="pre">PrimaryLayeredPlotter.enable_depth_peeling()</span></code></a></li>

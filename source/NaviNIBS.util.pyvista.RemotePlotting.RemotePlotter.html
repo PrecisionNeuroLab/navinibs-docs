@@ -379,6 +379,7 @@
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.ticks.html">NaviNIBS.util.pyvista.ticks module</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
@@ -390,6 +391,7 @@
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.logging.html">NaviNIBS.util.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
 </ul>
@@ -595,7 +597,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.</span></span><span class="sig-name descname"><span class="pre">RemotePlotterApp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doRunAsApp=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appLogEveryNLoops=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme='auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Win=&lt;class</span> <span class="pre">'QMainWindowWithCloseSignal'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reqPort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repPort=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appName='RemotePlotter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotterKwargs=NOTHING</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/RemotePlotting/RemotePlotter.html#RemotePlotterApp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.</span></span><span class="sig-name descname"><span class="pre">RemotePlotterApp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doRunAsApp=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appLogEveryNLoops=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme='auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Win=&lt;class</span> <span class="pre">'QMainWindowWithCloseSignal'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reqPort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repPort=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appName='RemotePlotter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logFilepath=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotterKwargs=NOTHING</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/util/pyvista/RemotePlotting/RemotePlotter.html#RemotePlotterApp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="NaviNIBS.util.GUI.QAppWithAsyncioLoop.html#NaviNIBS.util.GUI.QAppWithAsyncioLoop.RunnableAsApp" title="NaviNIBS.util.GUI.QAppWithAsyncioLoop.RunnableAsApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">RunnableAsApp</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -607,6 +609,7 @@
 <li><p><strong>_reqPort</strong></p></li>
 <li><p><strong>_repPort</strong></p></li>
 <li><p><strong>_appName</strong></p></li>
+<li><p><strong>_logFilepath</strong></p></li>
 <li><p><strong>_plotterKwargs</strong></p></li>
 </ul>
 </dd>
@@ -624,6 +627,11 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._appName">
 <span class="sig-name descname"><span class="pre">_appName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._appName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._logFilepath">
+<span class="sig-name descname"><span class="pre">_logFilepath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._logFilepath" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -725,6 +733,7 @@
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._reqPort"><code class="docutils literal notranslate"><span class="pre">RemotePlotterApp._reqPort</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._repPort"><code class="docutils literal notranslate"><span class="pre">RemotePlotterApp._repPort</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._appName"><code class="docutils literal notranslate"><span class="pre">RemotePlotterApp._appName</span></code></a></li>
+<li><a class="reference internal" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._logFilepath"><code class="docutils literal notranslate"><span class="pre">RemotePlotterApp._logFilepath</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._plotterKwargs"><code class="docutils literal notranslate"><span class="pre">RemotePlotterApp._plotterKwargs</span></code></a></li>
 </ul>
 </li>

@@ -377,6 +377,7 @@
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.ticks.html">NaviNIBS.util.pyvista.ticks module</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
@@ -388,6 +389,7 @@
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.logging.html">NaviNIBS.util.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
 </ul>
@@ -513,7 +515,15 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.AddonClassElement._ClassName">_ClassName (NaviNIBS.Navigator.Model.Addons.AddonClassElement attribute)</a>
 </li>
-        <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView._clim">_clim (NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView attribute)</a>
+        <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRI3DView._clim">_clim (NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRI3DView attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim2DMax">_clim2DMax (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim2DMin">_clim2DMin (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim3DMax">_clim3DMax (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI._clim3DMin">_clim3DMin (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Devices.ToolPositionsServer.html#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._cmdPort">_cmdPort (NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer attribute)</a>
 
@@ -630,6 +640,8 @@
         <li><a href="source/NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool._doRenderTracker">_doRenderTracker (NaviNIBS.Navigator.Model.Tools.Tool attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.html#NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.TargetingCrosshairsView._doShowHandleAngleError">_doShowHandleAngleError (NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.TargetingCrosshairsView attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView._doShowScalarBar">_doShowScalarBar (NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.html#NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.TargetingCrosshairsView._doShowScalpTangentialAngleError">_doShowScalpTangentialAngleError (NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.TargetingCrosshairsView attribute)</a>
 </li>
@@ -779,6 +791,12 @@
         </ul></li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.html#NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.LegendEntry._loc">_loc (NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.LegendEntry attribute)</a>
 </li>
+        <li><a href="source/NaviNIBS.Devices.ToolPositionsServer.html#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._logFilepath">_logFilepath (NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer attribute)</a>
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp._logFilepath">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotterApp attribute)</a>
+</li>
+        </ul></li>
         <li><a href="source/NaviNIBS.Navigator.Model.Addons.html#NaviNIBS.Navigator.Model.Addons.Addon._MainViewPanels">_MainViewPanels (NaviNIBS.Navigator.Model.Addons.Addon attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target._mayBeADependency">_mayBeADependency (NaviNIBS.Navigator.Model.Targets.Target attribute)</a>
@@ -879,7 +897,11 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.html#NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.ToolCalibrationWindow._parent">_parent (NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.ToolCalibrationWindow attribute)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper._parentActor">_parentActor (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper attribute)</a>
+</li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotManagerBase._parentLayout">_parentLayout (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.RemotePlotManagerBase attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper._parentPlotter">_parentPlotter (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.SurfViews.html#NaviNIBS.Navigator.GUI.Widgets.SurfViews.Surf3DView._pickableSurfs">_pickableSurfs (NaviNIBS.Navigator.GUI.Widgets.SurfViews.Surf3DView attribute)</a>
 </li>
@@ -983,6 +1005,8 @@
           <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session._samples">(NaviNIBS.Navigator.Model.Session.Session attribute)</a>
 </li>
         </ul></li>
+        <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.SampleMetadataOrientationsLayer.html#NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.SampleMetadataOrientationsLayer.SampleMetadataInterpolatedSurfaceLayer._scalarAnnotations">_scalarAnnotations (NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.SampleMetadataOrientationsLayer.SampleMetadataInterpolatedSurfaceLayer attribute)</a>
+</li>
         <li><a href="source/NaviNIBS.util.lsl.LSLStreamSelector.html#NaviNIBS.util.lsl.LSLStreamSelector.LSLStreamSelector._selectedStreamKey">_selectedStreamKey (NaviNIBS.util.lsl.LSLStreamSelector.LSLStreamSelector attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Devices.ToolPositionsClient.html#NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient._serverCmdPort">_serverCmdPort (NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient attribute)</a>
@@ -1347,8 +1371,6 @@
           <li><a href="source/NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.alignmentWeights">(NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints property)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.BackgroundPlotter.allowNonblockingCalls">allowNonblockingCalls() (NaviNIBS.util.pyvista.plotting.BackgroundPlotter method)</a>
 
         <ul>
@@ -1357,6 +1379,8 @@
           <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.allowNonblockingCalls">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials.allSampledFiducials">allSampledFiducials (NaviNIBS.Navigator.Model.SubjectRegistration.Fiducials property)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.AltTContainer">AltTContainer (class in NaviNIBS.util.GUI.Dock)</a>
@@ -1462,6 +1486,14 @@
         <li><a href="source/NaviNIBS.util.numpy.html#NaviNIBS.util.numpy.attrsWithNumpyFromDict">attrsWithNumpyFromDict() (in module NaviNIBS.util.numpy)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.html#NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.ManageSessionPanel.augmentSession">augmentSession() (NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.ManageSessionPanel method)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim2DMax">autoClim2DMax (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim2DMin">autoClim2DMin (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim3DMax">autoClim3DMax (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.autoClim3DMin">autoClim3DMin (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.CoordinateSystems.html#NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems.autogenerateCoordinateSystems">autogenerateCoordinateSystems() (NaviNIBS.Navigator.Model.CoordinateSystems.CoordinateSystems method)</a>
 </li>
@@ -1603,6 +1635,18 @@
           <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clearCache">(NaviNIBS.Navigator.Model.MRI.MRI method)</a>
 </li>
         </ul></li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2D">clim2D (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2DMax">clim2DMax (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim2DMin">clim2DMin (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3D">clim3D (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3DMax">clim3DMax (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.clim3DMin">clim3DMin (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy.clipping_range">clipping_range (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy property)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.CameraPanel.html#NaviNIBS.Navigator.GUI.ViewPanels.CameraPanel.CameraPanel.close">close() (NaviNIBS.Navigator.GUI.ViewPanels.CameraPanel.CameraPanel method)</a>
@@ -1623,6 +1667,8 @@
         </ul></li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxy.close_async">close_async() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxy method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.GUI.QWidgetWithCloseSignal.html#NaviNIBS.util.GUI.QWidgetWithCloseSignal.QMainWindowWithCloseSignal.closeEvent">closeEvent() (NaviNIBS.util.GUI.QWidgetWithCloseSignal.QMainWindowWithCloseSignal method)</a>
 
         <ul>
@@ -1631,8 +1677,6 @@
           <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.BackgroundPlotter.closeEvent">(NaviNIBS.util.pyvista.plotting.BackgroundPlotter method)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.cmdPort">cmdPort (NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo property)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow.html#NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow.CoilCalibrationWithPlateWindow">CoilCalibrationWithPlateWindow (class in NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow)</a>
@@ -1650,6 +1694,8 @@
         <li><a href="source/NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.CoilTool">CoilTool (class in NaviNIBS.Navigator.Model.Tools)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel.html#NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel.CoilToolWidget">CoilToolWidget (class in NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.GUI.CollectionModels.html#NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel.collection">collection (NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel property)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.CollectionModels.html#NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel.collectionIsDict">collectionIsDict (NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel property)</a>
 </li>
@@ -1721,6 +1767,8 @@
         </ul></li>
         <li><a href="source/NaviNIBS.util.GUI.QAppWithAsyncioLoop.html#NaviNIBS.util.GUI.QAppWithAsyncioLoop.RunnableAsApp.createAndRunAsTask">createAndRunAsTask() (NaviNIBS.util.GUI.QAppWithAsyncioLoop.RunnableAsApp class method)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.logging.html#NaviNIBS.util.logging.createLogFileHandler">createLogFileHandler() (in module NaviNIBS.util.logging)</a>
+</li>
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.createNew">createNew() (NaviNIBS.Navigator.Model.Session.Session class method)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.TargetingCoordinator.html#NaviNIBS.Navigator.TargetingCoordinator.TargetingCoordinator.createTargetFromCurrentPose">createTargetFromCurrentPose() (NaviNIBS.Navigator.TargetingCoordinator.TargetingCoordinator method)</a>
@@ -1766,6 +1814,8 @@
         <li><a href="source/NaviNIBS.Navigator.GUI.CollectionModels.html#NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel.data">data() (NaviNIBS.Navigator.GUI.CollectionModels.CollectionTableModel method)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.dataAsUniformGrid">dataAsUniformGrid (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.dataToScannerTransf">dataToScannerTransf (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
 </li>
         <li><a href="source/NaviNIBS.util.Transforms.html#NaviNIBS.util.Transforms.decomposeTransform">decomposeTransform() (in module NaviNIBS.util.Transforms)</a>
 </li>
@@ -1817,10 +1867,10 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.Triggering.html#NaviNIBS.Navigator.Model.Triggering.TriggerRouter.disconnectFromTriggerSource">disconnectFromTriggerSource() (NaviNIBS.Navigator.Model.Triggering.TriggerRouter method)</a>
 </li>
-        <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.doAutoAdjustCameraClippingRange">doAutoAdjustCameraClippingRange (NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter property)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.doAutoAdjustCameraClippingRange">doAutoAdjustCameraClippingRange (NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter property)</a>
+</li>
         <li><a href="source/NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo.doAutostart">doAutostart (NaviNIBS.Navigator.Model.Tools.ToolPositionsServerInfo property)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.Dock">Dock (class in NaviNIBS.util.GUI.Dock)</a>
@@ -2159,10 +2209,10 @@
 </li>
         <li><a href="source/NaviNIBS.util.CoilOrientations.html#NaviNIBS.util.CoilOrientations.PoseMetricCalculator.getDepthTargetYAngleError">getDepthTargetYAngleError() (NaviNIBS.util.CoilOrientations.PoseMetricCalculator method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.lsl.html#NaviNIBS.util.lsl.getDTypeFromStreamInfo">getDTypeFromStreamInfo() (in module NaviNIBS.util.lsl)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.lsl.html#NaviNIBS.util.lsl.getEquivalentKeysForStreamInfo">getEquivalentKeysForStreamInfo() (in module NaviNIBS.util.lsl)</a>
 </li>
         <li><a href="source/NaviNIBS.util.CoilOrientations.html#NaviNIBS.util.CoilOrientations.PoseMetricCalculator.getHorizAngleError">getHorizAngleError() (NaviNIBS.util.CoilOrientations.PoseMetricCalculator method)</a>
@@ -2177,9 +2227,13 @@
 </li>
         <li><a href="source/NaviNIBS.Devices.ToolPositionsClient.html#NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient.getLatestTransf">getLatestTransf() (NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient method)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.logging.html#NaviNIBS.util.logging.getLogFilepath">getLogFilepath() (in module NaviNIBS.util.logging)</a>
+</li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy.GetMapper">GetMapper() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy method)</a>
 </li>
         <li><a href="source/NaviNIBS.util.ZMQConnector.html#NaviNIBS.util.ZMQConnector.getNewPort">getNewPort() (in module NaviNIBS.util.ZMQConnector)</a>
+</li>
+        <li><a href="source/NaviNIBS.util.pyvista.ticks.html#NaviNIBS.util.pyvista.ticks.getNiceTicksForRange">getNiceTicksForRange() (in module NaviNIBS.util.pyvista.ticks)</a>
 </li>
         <li><a href="source/NaviNIBS.util.CoilOrientations.html#NaviNIBS.util.CoilOrientations.PoseMetricCalculator.getNormalCoilXAngleError">getNormalCoilXAngleError() (NaviNIBS.util.CoilOrientations.PoseMetricCalculator method)</a>
 </li>
@@ -2453,14 +2507,16 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.html#NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.LegendEntry">LegendEntry (class in NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.loadCache">loadCache() (NaviNIBS.Navigator.Model.HeadModel.HeadModel method)</a>
 
         <ul>
           <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.loadCache">(NaviNIBS.Navigator.Model.MRI.MRI method)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.loadCacheIfNeeded">loadCacheIfNeeded() (NaviNIBS.Navigator.Model.MRI.MRI method)</a>
+</li>
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.loadFromFile">loadFromFile() (NaviNIBS.Navigator.Model.Session.Session class method)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.loadFromFolder">loadFromFolder() (NaviNIBS.Navigator.Model.Session.Session class method)</a>
@@ -2507,6 +2563,12 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.NavigatorGUI.html#NaviNIBS.Navigator.GUI.NavigatorGUI.NavigatorGUI.manageSessionPanel">manageSessionPanel (NaviNIBS.Navigator.GUI.NavigatorGUI.NavigatorGUI property)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy.mapper">mapper (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy property)</a>
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.mapper">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase property)</a>
+</li>
+        </ul></li>
         <li><a href="source/NaviNIBS.util.lsl.LSLStreamResolver.html#NaviNIBS.util.lsl.LSLStreamResolver.LSLStreamResolver.markStreamAsLost">markStreamAsLost() (NaviNIBS.util.lsl.LSLStreamResolver.LSLStreamResolver method)</a>
 
         <ul>
@@ -2516,6 +2578,8 @@
 </li>
         </ul></li>
         <li><a href="source/NaviNIBS.Navigator.Model.Targets.html#NaviNIBS.Navigator.Model.Targets.Target.mayBeADependency">mayBeADependency (NaviNIBS.Navigator.Model.Targets.Target property)</a>
+</li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.maybeResumeRendering">maybeResumeRendering() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.GenericCollection.html#NaviNIBS.Navigator.Model.GenericCollection.GenericCollection.merge">merge() (NaviNIBS.Navigator.Model.GenericCollection.GenericCollection method)</a>
 </li>
@@ -2733,6 +2797,8 @@
 </li>
           <li><a href="source/NaviNIBS.util.json.html#module-NaviNIBS.util.json">NaviNIBS.util.json</a>
 </li>
+          <li><a href="source/NaviNIBS.util.logging.html#module-NaviNIBS.util.logging">NaviNIBS.util.logging</a>
+</li>
           <li><a href="source/NaviNIBS.util.lsl.html#module-NaviNIBS.util.lsl">NaviNIBS.util.lsl</a>
 </li>
           <li><a href="source/NaviNIBS.util.lsl.LSLStreamResolver.html#module-NaviNIBS.util.lsl.LSLStreamResolver">NaviNIBS.util.lsl.LSLStreamResolver</a>
@@ -2758,6 +2824,8 @@
           <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.html#module-NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter</a>
 </li>
           <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#module-NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy</a>
+</li>
+          <li><a href="source/NaviNIBS.util.pyvista.ticks.html#module-NaviNIBS.util.pyvista.ticks">NaviNIBS.util.pyvista.ticks</a>
 </li>
           <li><a href="source/NaviNIBS.util.Signaler.html#module-NaviNIBS.util.Signaler">NaviNIBS.util.Signaler</a>
 </li>
@@ -3202,8 +3270,6 @@
           <li><a href="source/NaviNIBS.Navigator.Model.html#module-NaviNIBS.Navigator.Model">module</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     NaviNIBS.Navigator.Model.Addons
 
@@ -3211,6 +3277,8 @@
           <li><a href="source/NaviNIBS.Navigator.Model.Addons.html#module-NaviNIBS.Navigator.Model.Addons">module</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     NaviNIBS.Navigator.Model.Calculations
 
@@ -3471,6 +3539,13 @@
 </li>
         </ul></li>
         <li>
+    NaviNIBS.util.logging
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.logging.html#module-NaviNIBS.util.logging">module</a>
+</li>
+        </ul></li>
+        <li>
     NaviNIBS.util.lsl
 
         <ul>
@@ -3562,6 +3637,13 @@
 </li>
         </ul></li>
         <li>
+    NaviNIBS.util.pyvista.ticks
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.pyvista.ticks.html#module-NaviNIBS.util.pyvista.ticks">module</a>
+</li>
+        </ul></li>
+        <li>
     NaviNIBS.util.Signaler
 
         <ul>
@@ -3639,8 +3721,6 @@
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy.parallel_scale">parallel_scale (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy property)</a>
-</li>
-        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper.parentActor">parentActor (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.pauseRendering">pauseRendering() (NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter method)</a>
 
@@ -3834,10 +3914,10 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.remove">remove() (NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.remove_actor">remove_actor() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter.render">render() (NaviNIBS.util.pyvista.plotting.PrimaryLayeredPlotter method)</a>
 
         <ul>
@@ -3854,6 +3934,8 @@
           <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies.html#NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies.RemoteSecondaryLayeredPlotterProxy.rendererLayer">(NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies.RemoteSecondaryLayeredPlotterProxy property)</a>
 </li>
         </ul></li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.renderingPaused">renderingPaused() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
+</li>
         <li><a href="source/NaviNIBS.Navigator.Model.SubjectRegistration.html#NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints.replace">replace() (NaviNIBS.Navigator.Model.SubjectRegistration.HeadPoints method)</a>
 </li>
         <li><a href="source/NaviNIBS.Devices.ToolPositionsClient.html#NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient.requestLatestPositions">requestLatestPositions() (NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient method)</a>
@@ -3971,6 +4053,10 @@
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.saveToFile">saveToFile() (NaviNIBS.Navigator.Model.Session.Session method)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.saveToUnpackedDir">saveToUnpackedDir() (NaviNIBS.Navigator.Model.Session.Session method)</a>
+</li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper.scalar_range">scalar_range (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper property)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.scannerToDataTransf">scannerToDataTransf (NaviNIBS.Navigator.Model.MRI.MRI property)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.QScrollContainer.html#NaviNIBS.util.GUI.QScrollContainer.QScrollContainer.scrollArea">scrollArea (NaviNIBS.util.GUI.QScrollContainer.QScrollContainer property)</a>
 </li>
@@ -4106,6 +4192,8 @@
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.NavigatorGUI.html#NaviNIBS.Navigator.GUI.NavigatorGUI.NavigatorGUI.setTargetsPanel">setTargetsPanel (NaviNIBS.Navigator.GUI.NavigatorGUI.NavigatorGUI property)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy.SetUseBounds">SetUseBounds() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy method)</a>
+</li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy.SetUserTransform">SetUserTransform() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy method)</a>
 </li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy.SetVisibility">SetVisibility() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteActorProxy method)</a>
@@ -4132,6 +4220,12 @@
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.Dock.showEvent">showEvent() (NaviNIBS.util.GUI.Dock.Dock method)</a>
 </li>
+        <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.showGrid">showGrid() (NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin method)</a>
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.showGrid">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
+</li>
+        </ul></li>
         <li><a href="source/NaviNIBS.util.GUI.QFileSelectWidget.html#NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget.showRelativePrefix">showRelativePrefix (NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget property)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.QFileSelectWidget.html#NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget.showRelativeTo">showRelativeTo (NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget property)</a>
@@ -4155,6 +4249,8 @@
         <li><a href="source/NaviNIBS.util.CoilOrientations.html#NaviNIBS.util.CoilOrientations.PoseMetricCalculator.sigCacheReset">sigCacheReset (NaviNIBS.util.CoilOrientations.PoseMetricCalculator attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.DockLabel.sigClicked">sigClicked (NaviNIBS.util.GUI.Dock.DockLabel attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigClimChanged">sigClimChanged (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.DockLabel.sigCloseClicked">sigCloseClicked (NaviNIBS.util.GUI.Dock.DockLabel attribute)</a>
 </li>
@@ -4180,6 +4276,8 @@
           <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigDataChanged">(NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.Model.Session.html#NaviNIBS.Navigator.Model.Session.Session.sigDirtyKeysChanged">sigDirtyKeysChanged (NaviNIBS.Navigator.Model.Session.Session attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.Model.HeadModel.html#NaviNIBS.Navigator.Model.HeadModel.HeadModel.sigFilepathChanged">sigFilepathChanged (NaviNIBS.Navigator.Model.HeadModel.HeadModel attribute)</a>
@@ -4190,8 +4288,6 @@
           <li><a href="source/NaviNIBS.util.GUI.QFileSelectWidget.html#NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget.sigFilepathChanged">(NaviNIBS.util.GUI.QFileSelectWidget.QFileSelectWidget attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.html#NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.ToolCalibrationWindow.sigFinished">sigFinished (NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.ToolCalibrationWindow attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.Dock.sigFocused">sigFocused (NaviNIBS.util.GUI.Dock.Dock attribute)</a>
@@ -4247,6 +4343,8 @@
         <li><a href="source/NaviNIBS.Devices.ToolPositionsClient.html#NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient.sigLatestPositionsChanged">sigLatestPositionsChanged (NaviNIBS.Devices.ToolPositionsClient.ToolPositionsClient attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.html#NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.ManageSessionPanel.sigLoadedSession">sigLoadedSession (NaviNIBS.Navigator.GUI.ViewPanels.ManageSessionPanel.ManageSessionPanel attribute)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.Model.MRI.html#NaviNIBS.Navigator.Model.MRI.MRI.sigManualClimChanged">sigManualClimChanged (NaviNIBS.Navigator.Model.MRI.MRI attribute)</a>
 </li>
         <li><a href="source/NaviNIBS.util.Signaler.html#NaviNIBS.util.Signaler.Signal">Signal (class in NaviNIBS.util.Signaler)</a>
 </li>
@@ -4704,32 +4802,36 @@
 </li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy.up">up (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy property)</a>
 </li>
-        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.update">update() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper.update">update() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteMapper method)</a>
+
+        <ul>
+          <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.update">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
+</li>
+        </ul></li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.update_scalar_bar_range">update_scalar_bar_range() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
         <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.update_scalars">update_scalars() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.lsl.LSLStreamResolver.html#NaviNIBS.util.lsl.LSLStreamResolver.LSLStreamResolver.updateAvailableStreams">updateAvailableStreams() (NaviNIBS.util.lsl.LSLStreamResolver.LSLStreamResolver method)</a>
 
         <ul>
           <li><a href="source/NaviNIBS.util.lsl.LSLStreamResolver.html#NaviNIBS.util.lsl.LSLStreamResolver.ThreadedLSLStreamResolver.updateAvailableStreams">(NaviNIBS.util.lsl.LSLStreamResolver.ThreadedLSLStreamResolver method)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.Navigator.GUI.ViewPanels.html#NaviNIBS.Navigator.GUI.ViewPanels.MainViewPanel.updateEnabled">updateEnabled() (NaviNIBS.Navigator.GUI.ViewPanels.MainViewPanel method)</a>
 </li>
-        <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.DockLabel.updateStyle">updateStyle() (NaviNIBS.util.GUI.Dock.DockLabel method)</a>
-</li>
-        <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRI3DView.updateView">updateView() (NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRI3DView method)</a>
+        <li><a href="source/NaviNIBS.util.pyvista.plotting.html#NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin.updateScalarBarRangeWithVol">updateScalarBarRangeWithVol() (NaviNIBS.util.pyvista.plotting.PlotterImprovementsMixin method)</a>
 
         <ul>
-          <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView.updateView">(NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView method)</a>
-</li>
-          <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.SurfViews.html#NaviNIBS.Navigator.GUI.Widgets.SurfViews.Surf3DView.updateView">(NaviNIBS.Navigator.GUI.Widgets.SurfViews.Surf3DView method)</a>
-</li>
-          <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.SurfViews.html#NaviNIBS.Navigator.GUI.Widgets.SurfViews.SurfSliceView.updateView">(NaviNIBS.Navigator.GUI.Widgets.SurfViews.SurfSliceView method)</a>
+          <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase.updateScalarBarRangeWithVol">(NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemotePlotterProxyBase method)</a>
 </li>
         </ul></li>
+        <li><a href="source/NaviNIBS.util.GUI.Dock.html#NaviNIBS.util.GUI.Dock.DockLabel.updateStyle">updateStyle() (NaviNIBS.util.GUI.Dock.DockLabel method)</a>
+</li>
+        <li><a href="source/NaviNIBS.Navigator.GUI.Widgets.MRIViews.html#NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView.updateView">updateView() (NaviNIBS.Navigator.GUI.Widgets.MRIViews.MRISliceView method)</a>
+</li>
         <li><a href="source/NaviNIBS.Navigator.Model.Tools.html#NaviNIBS.Navigator.Model.Tools.Tool.usedFor">usedFor (NaviNIBS.Navigator.Model.Tools.Tool property)</a>
 </li>
     </ul></td>
@@ -4835,6 +4937,8 @@
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="source/NaviNIBS.util.ZMQConnector.html#NaviNIBS.util.ZMQConnector.ZMQConnectorServer">ZMQConnectorServer (class in NaviNIBS.util.ZMQConnector)</a>
+</li>
+        <li><a href="source/NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.html#NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy.zoom">zoom() (NaviNIBS.util.pyvista.RemotePlotting.RemotePlotterProxy.RemoteCameraProxy method)</a>
 </li>
     </ul></td>
   </tr></table>

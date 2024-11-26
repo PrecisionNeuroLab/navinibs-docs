@@ -379,6 +379,7 @@
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.pyvista.ticks.html">NaviNIBS.util.pyvista.ticks module</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
@@ -390,6 +391,7 @@
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.logging.html">NaviNIBS.util.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
 </ul>
@@ -448,7 +450,7 @@
 <span id="navinibs-devices-toolpositionsserver-module"></span><h1>NaviNIBS.Devices.ToolPositionsServer module<a class="headerlink" href="#module-NaviNIBS.Devices.ToolPositionsServer" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NaviNIBS.Devices.ToolPositionsServer.</span></span><span class="sig-name descname"><span class="pre">ToolPositionsServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pubPort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18950</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdPort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18951</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publishRateLimit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/Devices/ToolPositionsServer.html#ToolPositionsServer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NaviNIBS.Devices.ToolPositionsServer.</span></span><span class="sig-name descname"><span class="pre">ToolPositionsServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pubPort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18950</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdPort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18951</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logFilepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publishRateLimit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/NaviNIBS/Devices/ToolPositionsServer.html#ToolPositionsServer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base class for any tool positions server (to provide wrapper that is agnostic of connection type)</p>
 <dl class="field-list simple">
@@ -457,6 +459,7 @@
 <li><p><strong>_hostname</strong></p></li>
 <li><p><strong>_pubPort</strong></p></li>
 <li><p><strong>_cmdPort</strong></p></li>
+<li><p><strong>_logFilepath</strong></p></li>
 <li><p><strong>_publishRateLimit</strong></p></li>
 </ul>
 </dd>
@@ -474,6 +477,11 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._cmdPort">
 <span class="sig-name descname"><span class="pre">_cmdPort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._cmdPort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._logFilepath">
+<span class="sig-name descname"><span class="pre">_logFilepath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._logFilepath" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -570,6 +578,7 @@
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._hostname"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer._hostname</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._pubPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer._pubPort</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._cmdPort"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer._cmdPort</span></code></a></li>
+<li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer._logFilepath"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer._logFilepath</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer.type"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer.type</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer.run"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer.run()</span></code></a></li>
 <li><a class="reference internal" href="#NaviNIBS.Devices.ToolPositionsServer.ToolPositionsServer.recordNewPosition"><code class="docutils literal notranslate"><span class="pre">ToolPositionsServer.recordNewPosition()</span></code></a></li>
