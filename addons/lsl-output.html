@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Simulated tools" href="simulated-tools.html" /><link rel="prev" title="Electrode digitization" href="../core/ElectrodeDigitization.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Data model" href="../datamodel.html" /><link rel="prev" title="Cobot control" href="cobot.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>Addons - NaviNIBS documentation</title>
+        <title>LSL Output - NaviNIBS documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -193,7 +193,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -238,10 +238,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../core/ElectrodeDigitization.html">Electrode digitization</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Addons</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Addons</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Addons</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Addons</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="simulated-tools.html">Simulated tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cobot.html">Cobot control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lsl-output.html">LSL Output</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">LSL Output</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodel.html">Data model</a></li>
@@ -427,7 +427,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/addons/index.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/addons/lsl-output.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -441,44 +441,55 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="addons">
-<h1>Addons<a class="headerlink" href="#addons" title="Link to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="simulated-tools.html">Simulated tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulated-tools.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulated-tools.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulated-tools.html#usage">Usage</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cobot.html">Cobot control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cobot.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cobot.html#configuration">Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cobot.html#enable-addon">Enable addon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cobot.html#load-cobot-specific-tools">Load Cobot-specific tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cobot.html#network-connections">Network connections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cobot.html#specify-cobot-ip-address">Specify Cobot IP address</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="cobot.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cobot.html#typical-cobot-navigation">Typical Cobot navigation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lsl-output.html">LSL Output</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lsl-output.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lsl-output.html#configuration">Configuration</a></li>
-</ul>
-</li>
-</ul>
+          <section id="lsl-output">
+<h1>LSL Output<a class="headerlink" href="#lsl-output" title="Link to this heading">¶</a></h1>
+<section id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
+<p>Install the <a class="reference external" href="https://github.com/PrecisionNeuroLab/NaviNIBS_LSL_Output">LSL output addon</a> with:</p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(NaviNIBS-env)</span><span class="gp">...&gt;</span>pip install navinibs-lsl-output
+</pre></div>
 </div>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">¶</a></h2>
+<p>To stream out via LSL, you need to enable the addon in your NaviNIBS session. This can be done via the GUI or by editing configuration files:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">GUI</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Configuration files</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ol class="arabic simple">
+<li><p>Open NaviNIBS</p></li>
+<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">session</span></code> tab</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">addon</span></code> button</p></li>
+<li><p>Browse to the <code class="docutils literal notranslate"><span class="pre">addon_configuration.json</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">navinibs-lsl-output</span></code> directory (e.g. in <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> if installed via pip).</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code></p></li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>Create a file called <code class="docutils literal notranslate"><span class="pre">SessionConfig_Addon_NaviNIBS_LSL_Output.json</span></code> in your session directory.</p></li>
+<li><p>Add the following content to the file:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;addonInstallPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;..\\NaviNIBS_LSL_Output&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Edit the main <code class="docutils literal notranslate"><span class="pre">SessionConfig.json</span></code> in your session directory. Create or append to an existing <code class="docutils literal notranslate"><span class="pre">addons</span></code> list to include the filename of the addon session config created above:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;addons&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SessionConfig_Addon_NaviNIBS_LSL_Output.json&quot;</span><span class="p">],</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Save the file and then open the session in NaviNIBS.</p></li>
+</ol>
+</div></div>
+<p>Once the addon is enabled, you can try opening an LSL stream viewer / recorder and check that the <code class="docutils literal notranslate"><span class="pre">NaviNIBS_Float</span></code> and <code class="docutils literal notranslate"><span class="pre">NaviNIBS_Str</span></code> streams are detected.</p>
+</section>
 </section>
 
         </article>
@@ -486,23 +497,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="simulated-tools.html">
+          <a class="next-page" href="../datamodel.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Simulated tools</div>
+                <div class="title">Data model</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../core/ElectrodeDigitization.html">
+          <a class="prev-page" href="cobot.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Electrode digitization</div>
+                <div class="title">Cobot control</div>
                 
               </div>
             </a>
@@ -524,8 +535,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">LSL Output</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -536,5 +567,6 @@
     <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=6dbb43f8"></script>
+    <script src="../_static/tabs.js?v=3030b3cb"></script>
     </body>
 </html>
