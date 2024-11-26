@@ -1,4 +1,4 @@
-<style type="text/css">
+<style>
 .tg  {
     font-family: sans-serif;
 	font-size: smaller;
@@ -24,12 +24,10 @@
     font-size: smaller;
     background-color:#7777FF22;
 }
-.tg .tg-section-label{
-    border: none;
+.tg .tg-section-label {
     font-weight: bold;
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    text-align: center;
+    text-align: left;
+    border: none;
 }
 .tg .tg-cell{
     text-align: center;
@@ -51,7 +49,7 @@
 .tg .tg-feature{
     text-align: left;
     border: none;
-    border-left: solid thin;
+  text-indent: 1em;
 }
 .tg .tr-boundary {
   border-top: solid;
@@ -76,7 +74,6 @@
 <table class="tg" style="float: left;">
 <thead>
   <tr>
-    <th class="tg-section-label"> </th>
     <th class="tg-feature">Feature</th>
     <th class="tg-navinibs">NaviNIBS</th>
     <th class="tg">Brainsight</th>
@@ -87,10 +84,13 @@
   </tr>
 </thead>
 <tbody>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="3">Software</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Software</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">Open source</td>
-    <td class="tg-cell tg-navinibs">&#128339;</td>
+    <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
@@ -115,8 +115,11 @@
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-partial">&#x2248;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="5">Imaging data</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Imaging data</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">MRI import</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -161,8 +164,11 @@
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-partial">&#x2248;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="4">Targets</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Targets</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">Create planned targets</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -198,8 +204,11 @@
     <td class="tg-cell tg-partial">&#x2248;</td>
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="5">Tracking</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Tracking</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">NDI Polaris camera support</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -244,8 +253,11 @@
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="5">Registration</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Registration</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">Autoset planned fiducials</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-no">&#10006;</td>
@@ -290,8 +302,11 @@
     <td class="tg-cell tg-yes">&#10004;</td>
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="4">Navigation</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Navigation</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">Real-time pose error metrics</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -327,8 +342,11 @@
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="4">Ephys.</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Electrophysiology</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
     <td class="tg-feature">EEG electrode digitization</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -364,9 +382,12 @@
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
-  <tr class="tr-boundary">
-    <td class="tg-section-label" rowspan="3">Robot</td>
-    <td class="tg-feature">Basic cobot control</td>
+    <tr class="tr-boundary">
+        <td class="tg-section-label">Robot integration</td>
+        <td class="tg-cell tg-navinibs"></td>
+    </tr>
+  <tr>
+    <td class="tg-feature">Basic Cobot control</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
     <td class="tg-cell tg-yes">&#10004;</td>
@@ -375,7 +396,7 @@
     <td class="tg-cell tg-no">&#10006;</td>
   </tr>
   <tr>
-    <td class="tg-feature">Advanced cobot control</td>
+    <td class="tg-feature">Advanced Cobot control</td>
     <td class="tg-cell tg-yes tg-navinibs">&#10004;</td>
     <td class="tg-cell tg-no">&#10006;</td>
     <td class="tg-cell tg-no">&#10006;</td>
