@@ -2,7 +2,7 @@
 <html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="NaviNIBS" href="source/modules.html" /><link rel="prev" title="Troubleshooting" href="troubleshooting/index.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
@@ -241,6 +241,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="addons/index.html">Addons</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Addons</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="addons/simulated-tools.html">Simulated tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addons/cobot.html">Cobot control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/lsl-output.html">LSL Output</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="datamodel.html">Data model</a></li>
@@ -379,6 +380,7 @@
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.PlotInteraction.html">NaviNIBS.util.pyvista.PlotInteraction module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.dataset.html">NaviNIBS.util.pyvista.dataset module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.plotting.html">NaviNIBS.util.pyvista.plotting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="source/NaviNIBS.util.pyvista.ticks.html">NaviNIBS.util.pyvista.ticks module</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.AsyncRunner.html">NaviNIBS.util.AsyncRunner module</a></li>
@@ -390,6 +392,7 @@
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.ZMQConnector.html">NaviNIBS.util.ZMQConnector module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.attrs.html">NaviNIBS.util.attrs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.json.html">NaviNIBS.util.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.logging.html">NaviNIBS.util.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.numpy.html">NaviNIBS.util.numpy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="source/NaviNIBS.util.test_attrs.html">NaviNIBS.util.test_attrs module</a></li>
 </ul>
@@ -446,12 +449,21 @@
         <article role="main" id="furo-main-content">
           <section id="citing-navinibs">
 <h1>Citing NaviNIBS<a class="headerlink" href="#citing-navinibs" title="Link to this heading">¶</a></h1>
-<dl class="simple">
-<dt>If you use NaviNIBS in your research, please cite the following publication:</dt><dd><p>TODO</p>
-</dd>
-</dl>
-<p>Parts of NaviNIBS also make use of various open-source software packages. Please make sure to also cite the relevant software packages when using NaviNIBS. These include:
-TODO</p>
+<p>If you use NaviNIBS in your research, please cite the following preprint:</p>
+<div class="admonition-primary-navinibs-paper admonition">
+<p class="admonition-title">Primary NaviNIBS paper</p>
+<p>Christopher C. Cline, Lily Forman, Winn Hartford, Jade Truong, Sara Parmigiani, and Corey J. Keller, “NaviNIBS: a comprehensive and open-source software toolbox for neuronavigated noninvasive brain stimulation,” Nov. 27, 2024, <em>bioRxiv</em>. doi: <a class="reference external" href="https://doi.org/10.1101/2024.11.26.625446">10.1101/2024.11.26.625446</a></p>
+</div>
+<p>Parts of NaviNIBS also make use of various open-source software packages. Please make sure to also cite the relevant software packages when using NaviNIBS. These include:</p>
+<ul class="simple">
+<li><p>Andras Lasso, Tamas Heffter, Adam Rankin, Csaba Pinter, Tamas Ungi, and Gabor Fichtinger, “PLUS: Open-Source Toolkit for Ultrasound-Guided Intervention Systems,” <em>IEEE Trans. Biomed. Eng.</em>, vol. 61, no. 10, pp. 2527-2537, Oct. 2014, doi: 10.1109/TBME.2014.2322864</p></li>
+<li><ol class="upperalpha simple">
+<li><p>Thielscher, A. Antunes, and G. B. Saturnino, “Field modeling for transcranial magnetic stimulation: A useful tool to understand the physiological effects of TMS?,” in <em>2015 37th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em>, Aug. 2015, pp. 222-225. doi: 10.1109/EMBC.2015.7318340</p></li>
+</ol>
+</li>
+<li><p>Jesper D. Nielsen et al., “Automatic skull segmentation from MR images for realistic volume conductor models of the head: Assessment of the state-of-the-art,” <em>NeuroImage</em>, vol. 174, pp. 587-598, Jul. 2018, doi: 10.1016/j.neuroimage.2018.03.001</p></li>
+<li><p>Oula Puonti, Koen Van Leemput, Guilherme B. Saturnino, Hartwig R. Siebner, Kristoffer H. Madsen, and Axel Thielscher, “Accurate and robust whole-head segmentation from magnetic resonance images for individualized head modeling,” <em>NeuroImage</em>, vol. 219, p. 117044, Oct. 2020, doi: 10.1016/j.neuroimage.2020.117044</p></li>
+</ul>
 </section>
 
         </article>
