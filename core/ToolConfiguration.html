@@ -634,10 +634,10 @@ for a default (simulated) position when a camera is not connected.</p>
 <section id="tool-3d-models">
 <h2>Tool 3D models<a class="headerlink" href="#tool-3d-models" title="Link to this heading">¶</a></h2>
 <p>Some tracked tools from other neuronavigation systems can be used in NaviNIBS, or new calibration tools can be purchased (e.g. from OptiTrack or NDI). This is recommended for high-precision tools like pointers and calibration plates.</p>
-<div id="threejs-viewer-core-ToolConfiguration-2-1845279550672" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
+<div id="threejs-viewer-core-ToolConfiguration-2-2400815404496" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
 <div style="width:600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
         <div style="font-size:15px;text-align:center;">OptiTrack_Probe.ply</div>
-        <a href="/_static/tracked-tools/probes/OptiTrack_Probe.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
+        <a href="../_static/tracked-tools/probes/OptiTrack_Probe.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
     </div>
 
 <script type="module">
@@ -646,7 +646,7 @@ import { PLYLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/
 import { STLLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/STLLoader.js?module';
 import { OrbitControls } from 'https://unpkg.com/three@0.177.0/examples/jsm/controls/OrbitControls.js?module';
 (function() {
-const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-1845279550672');
+const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-2400815404496');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0); 
 const camera = new THREE.PerspectiveCamera(30, 600/400, 0.1, 2000);
@@ -688,7 +688,7 @@ controls.dampingFactor = 0.05;
 let mainMesh = null;
 let pivot = null;
 let loader;
-const meshPath = '/_static/tracked-tools/probes/OptiTrack_Probe.ply';
+const meshPath = '../_static/tracked-tools/probes/OptiTrack_Probe.ply';
 if (meshPath.endsWith('.ply')) {
     loader = new PLYLoader();
 } else if (meshPath.endsWith('.stl')) {
@@ -788,10 +788,10 @@ animate();
 </script>
 <p>See <a class="reference internal" href="CoilCalibration.html#coil-calibration-jigs"><span class="std std-ref">Coil calibration jigs</span></a> for examples of 3D-printed coil calibration jigs and related coil geometries.</p>
 <p>Tools with less stringent geometry requirements can also be 3D-printed and combined with infrared-reflective spheres to create custom tracked tools. For example, the subject and coil trackers below can be 3D printed, combined with M4 threaded reflective markers, M4 nylon flat head screws (e.g. McMaster-Carr part number 92929A255), M4 nylon nuts (e.g. McMaster-Carr part number 93800A500), and M6 flat head screws to connect the subject tracker top to tripod base (McMaster-Carr part number 91294A237).</p>
-<div id="threejs-viewer-core-ToolConfiguration-2-1845279555152" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
+<div id="threejs-viewer-core-ToolConfiguration-2-2400818213264" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
 <div style="width:600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
         <div style="font-size:15px;text-align:center;">SubjectTracker_v1.ply</div>
-        <a href="/_static/tracked-tools/subject-trackers/SubjectTracker_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
+        <a href="../_static/tracked-tools/subject-trackers/SubjectTracker_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
     </div>
 
 <script type="module">
@@ -800,7 +800,7 @@ import { PLYLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/
 import { STLLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/STLLoader.js?module';
 import { OrbitControls } from 'https://unpkg.com/three@0.177.0/examples/jsm/controls/OrbitControls.js?module';
 (function() {
-const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-1845279555152');
+const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-2400818213264');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0); 
 const camera = new THREE.PerspectiveCamera(30, 600/400, 0.1, 2000);
@@ -842,7 +842,7 @@ controls.dampingFactor = 0.05;
 let mainMesh = null;
 let pivot = null;
 let loader;
-const meshPath = '/_static/tracked-tools/subject-trackers/SubjectTracker_v1.ply';
+const meshPath = '../_static/tracked-tools/subject-trackers/SubjectTracker_v1.ply';
 if (meshPath.endsWith('.ply')) {
     loader = new PLYLoader();
 } else if (meshPath.endsWith('.stl')) {
@@ -940,10 +940,10 @@ function animate() {
 animate();
 })();
 </script>
-<div id="threejs-viewer-core-ToolConfiguration-2-1845279572240" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
+<div id="threejs-viewer-core-ToolConfiguration-2-2400815177680" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
 <div style="width:600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
         <div style="font-size:15px;text-align:center;">CoilTrackerA_v1.ply</div>
-        <a href="/_static/tracked-tools/coil-trackers/CoilTrackerA_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
+        <a href="../_static/tracked-tools/coil-trackers/CoilTrackerA_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
     </div>
 
 <script type="module">
@@ -952,7 +952,7 @@ import { PLYLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/
 import { STLLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/STLLoader.js?module';
 import { OrbitControls } from 'https://unpkg.com/three@0.177.0/examples/jsm/controls/OrbitControls.js?module';
 (function() {
-const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-1845279572240');
+const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-2400815177680');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0); 
 const camera = new THREE.PerspectiveCamera(30, 600/400, 0.1, 2000);
@@ -994,7 +994,7 @@ controls.dampingFactor = 0.05;
 let mainMesh = null;
 let pivot = null;
 let loader;
-const meshPath = '/_static/tracked-tools/coil-trackers/CoilTrackerA_v1.ply';
+const meshPath = '../_static/tracked-tools/coil-trackers/CoilTrackerA_v1.ply';
 if (meshPath.endsWith('.ply')) {
     loader = new PLYLoader();
 } else if (meshPath.endsWith('.stl')) {
@@ -1092,10 +1092,10 @@ function animate() {
 animate();
 })();
 </script>
-<div id="threejs-viewer-core-ToolConfiguration-2-1845279572880" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
+<div id="threejs-viewer-core-ToolConfiguration-2-2400815178640" style="width: 600px; height: 400px; border: 1px solid #ccc; margin: 0 auto;"></div>
 <div style="width:600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
         <div style="font-size:15px;text-align:center;">CoilTrackerB_v1.ply</div>
-        <a href="/_static/tracked-tools/coil-trackers/CoilTrackerB_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
+        <a href="../_static/tracked-tools/coil-trackers/CoilTrackerB_v1.ply" download style="display:inline-block;padding:6px 16px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;">Download</a>
     </div>
 
 <script type="module">
@@ -1104,7 +1104,7 @@ import { PLYLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/
 import { STLLoader } from 'https://unpkg.com/three@0.177.0/examples/jsm/loaders/STLLoader.js?module';
 import { OrbitControls } from 'https://unpkg.com/three@0.177.0/examples/jsm/controls/OrbitControls.js?module';
 (function() {
-const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-1845279572880');
+const container = document.getElementById('threejs-viewer-core-ToolConfiguration-2-2400815178640');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0); 
 const camera = new THREE.PerspectiveCamera(30, 600/400, 0.1, 2000);
@@ -1146,7 +1146,7 @@ controls.dampingFactor = 0.05;
 let mainMesh = null;
 let pivot = null;
 let loader;
-const meshPath = '/_static/tracked-tools/coil-trackers/CoilTrackerB_v1.ply';
+const meshPath = '../_static/tracked-tools/coil-trackers/CoilTrackerB_v1.ply';
 if (meshPath.endsWith('.ply')) {
     loader = new PLYLoader();
 } else if (meshPath.endsWith('.stl')) {
