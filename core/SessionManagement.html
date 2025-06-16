@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Coil calibration" href="CoilCalibration.html" /><link rel="prev" title="Target planning" href="TargetPlanning.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Tool configuration" href="ToolConfiguration.html" /><link rel="prev" title="Core features" href="index.html" />
 
     <link rel="shortcut icon" href="../_static/NaviNIBSIcon.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>Subject registration - NaviNIBS documentation</title>
+        <title>Session management - NaviNIBS documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -228,12 +228,12 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Core features</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Core features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="SessionManagement.html">Session Management</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Session management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ToolConfiguration.html">Tool configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HeadModel.html">Head model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TargetPlanning.html">Target planning</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Subject registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SubjectRegistration.html">Subject registration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CoilCalibration.html">Coil calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BasicNavigation.html">Basic navigation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TriggeringConfiguration.html">Triggering configuration</a></li>
@@ -431,7 +431,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/core/SubjectRegistration.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/core/SessionManagement.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -451,44 +451,51 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="subject-registration">
-<h1>Subject registration<a class="headerlink" href="#subject-registration" title="Link to this heading">¶</a></h1>
-<p>Subject registration is the process of calibrating the position of a subject’s head relative to an optical tracker affixed to the head (the <cite>head tracker</cite>).</p>
-<section id="fiducial-planning">
-<h2>Fiducial planning<a class="headerlink" href="#fiducial-planning" title="Link to this heading">¶</a></h2>
-<img alt="../_images/PlanFiducials_Autoset.png" src="../_images/PlanFiducials_Autoset.png" />
+          <section id="session-management">
+<h1>Session management<a class="headerlink" href="#session-management" title="Link to this heading">¶</a></h1>
+<section id="creating-a-new-session">
+<h2>Creating a new session<a class="headerlink" href="#creating-a-new-session" title="Link to this heading">¶</a></h2>
+<p>A new session can be created from scratch by launching NaviNIBS and clicking the “New Session” button.</p>
+<img alt="../_images/CreateSession.png" src="../_images/CreateSession.png" />
 </section>
-<section id="initial-registration">
-<h2>Initial registration<a class="headerlink" href="#initial-registration" title="Link to this heading">¶</a></h2>
-<section id="registration-to-planned-fiducials">
-<h3>Registration to planned fiducials<a class="headerlink" href="#registration-to-planned-fiducials" title="Link to this heading">¶</a></h3>
-<img alt="../_images/HeadRegistration_InitialFiducials.png" src="../_images/HeadRegistration_InitialFiducials.png" />
-</section>
-<section id="head-point-refinement">
-<h3>Head point refinement<a class="headerlink" href="#head-point-refinement" title="Link to this heading">¶</a></h3>
-<img alt="../_images/HeadRegistration_HeadPointRefinement.png" src="../_images/HeadRegistration_HeadPointRefinement.png" />
-</section>
-</section>
-<section id="re-registration">
-<h2>Re-registration<a class="headerlink" href="#re-registration" title="Link to this heading">¶</a></h2>
-</section>
-<section id="recommended-registration-workflow">
-<h2>Recommended registration workflow<a class="headerlink" href="#recommended-registration-workflow" title="Link to this heading">¶</a></h2>
+<section id="copying-from-another-session">
+<h2>Copying from another session<a class="headerlink" href="#copying-from-another-session" title="Link to this heading">¶</a></h2>
+<section id="copying-from-a-template">
+<h3>Copying from a template<a class="headerlink" href="#copying-from-a-template" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/ImportFromOtherSession_1.png"><img alt="Copying from a template" class="align-right" src="../_images/ImportFromOtherSession_1.png" style="height: 300px;" />
+</a>
+<p>Rather than configuring all settings from scratch for each new subject, it is recommended to set up a template session with common settings (e.g. configured tools, addons, electrode digitization templates) and then copy from that template for each new session.</p>
 <ol class="arabic simple">
-<li><p><strong>Plan at least 3 fiducial locations</strong>, choosing points based on identifiability rather than any strict definition of anatomical feature (e.g. a point fiducial near the preauricular point, but not necessarily at it depending on subject’s ear shape), and with large distance between points, and avoiding colinearity.</p></li>
-<li><p><strong>Mark planned fiducial locations on the subject’s head</strong> with a washable ink pen or wax pencil.</p></li>
-<li><p><strong>Sample initial fiducial locations</strong>. Hold the stylus in a fixed orientation (e.g. shaft vertical, markers pointing forward) for all samples to prevent any stylus endpoint miscalibration from affecting relative fiducial locations, and carefully match the stylus tip to the marks on the skin within minimal soft tissue deflection.</p></li>
-<li><p><strong>Perform initial alignment</strong> to planned fiducial locations.</p></li>
-<li><p><strong>Check for any obvious issues</strong> in fiducial alignments. Try bringing the stylus back to each fiducial location and verify that you are consistently pointing to the same location (based on reported distance to the corresponding sampled fiducial in NaviNIBS). If necessary, modify planned locations for better identifiability and repeat all steps above or just re-sample locations with the stylus.</p></li>
-<li><p><strong>Sample head points</strong>. Sample broadly and uniformly across the scalp. Avoid regions not well matched in the virtual head model, like soft tissue near the ears and cheeks, the tip of the nose if it was not contained within the original MRI field of view, and areas with segmentation errors like those that can arise near the eyes with some MRI pulse sequences. Make sure to sample with the stylus tip contacting the scalp surface, not elevated off the head (e.g. not on top of an EEG electrode).</p></li>
-<li><p><strong>Refine alignment using the head points</strong>. Check the results to make sure the refined fiducial locations and scalp points align reasonably with the head model. If needed, modify refinement weights (e.g. by reducing the rotation refinement weight to prefer the rotational orientation set by the initial fiducials), re-align to initial fiducial locations and refine again using the already-measured head points.</p></li>
-<li><p><strong>Convert the sampled fiducial locations to new planned fiducial locations</strong>. These will be used during re-registration later.</p></li>
-<li><p><strong>Create a head reference point</strong>. Mark a location on the scalp, approximately near the primary site of stimulation or the top of the head, using a washable ink pen or wax pencil as above. Hold the stylus at this marked location, and create a new planned fiducial from stylus position. It is critical that this be done soon after initial registration (and refinement), before the head tracker has time to shift on the head. Set the alignment weight for this fiducial to a high value (e.g. 1000, compared to the default 1) to emphasize alignment to this fiducial near the site of stimulation more than than the anatomical fiducials during re-registration later.</p></li>
-<li><p><strong>Continue with typical study procedures</strong>.</p></li>
-<li><p><strong>Check for registration misalignment occasionally</strong>. If unsure whether the head tracker has shifted at any point, return to the registration pane and place the stylus at the head reference point and (optionally) at the other fiducial locations. If there is a large mismatch in reported distance between stylus position and these locations, then re-registration is needed.</p></li>
-<li><p><strong>When re-registering</strong>, use the stylus to sample locations for the converted fiducials and head reference points. Align with these new samples and visually check registration. Head point refinement should not be necessary at this stage.</p></li>
-<li><p>If re-registering <strong>across multiple days</strong>, consider documenting precise marked skin locations of the fiducial locations on the first visit (e.g. with close-up photos of the subject’s ears and marked preauricular fiducial locations) to better replicate these marks across days. Depending on the fidelity of replication of these marks across days, head point refinement may or may not be necessary during follow-up visits.</p></li>
+<li><p>Create a new session and enter the subject ID and session name.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">from</span> <span class="pre">session...</span></code>.</p></li>
+<li><p>Select your previously-created template session and click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+<li><dl class="simple">
+<dt>Select the <code class="docutils literal notranslate"><span class="pre">Different</span> <span class="pre">subject</span></code> preset click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</dt><dd><ul class="simple">
+<li><p>This preset should already be selected by default if the subject ID is different from the template session.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ol>
+</section>
+<section id="copying-from-another-session-in-the-same-subject">
+<h3>Copying from another session in the same subject<a class="headerlink" href="#copying-from-another-session-in-the-same-subject" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/ImportFromOtherSession_2.png"><img alt="Copying from another session in the same subject" class="align-right" src="../_images/ImportFromOtherSession_2.png" style="height: 300px;" />
+</a>
+<p>When a subject is returning for an additional session after their first, you can copy relevant settings (e.g. anatomical information, saved targets) from their previous session.</p>
+<ol class="arabic simple">
+<li><p>Create a new session and enter the subject ID and session name.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">from</span> <span class="pre">session...</span></code>.</p></li>
+<li><p>Select the subject’s previous session and click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+<li><dl class="simple">
+<dt>Select the <code class="docutils literal notranslate"><span class="pre">Same</span> <span class="pre">subject,</span> <span class="pre">different</span> <span class="pre">session</span></code> preset and click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</dt><dd><ul class="simple">
+<li><p>This preset should already be selected by default if the subject ID is the same as the previous session.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -497,23 +504,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="CoilCalibration.html">
+          <a class="next-page" href="ToolConfiguration.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Coil calibration</div>
+                <div class="title">Tool configuration</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="TargetPlanning.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Target planning</div>
+                <div class="title">Core features</div>
                 
               </div>
             </a>
@@ -547,15 +554,13 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Subject registration</a><ul>
-<li><a class="reference internal" href="#fiducial-planning">Fiducial planning</a></li>
-<li><a class="reference internal" href="#initial-registration">Initial registration</a><ul>
-<li><a class="reference internal" href="#registration-to-planned-fiducials">Registration to planned fiducials</a></li>
-<li><a class="reference internal" href="#head-point-refinement">Head point refinement</a></li>
+<li><a class="reference internal" href="#">Session management</a><ul>
+<li><a class="reference internal" href="#creating-a-new-session">Creating a new session</a></li>
+<li><a class="reference internal" href="#copying-from-another-session">Copying from another session</a><ul>
+<li><a class="reference internal" href="#copying-from-a-template">Copying from a template</a></li>
+<li><a class="reference internal" href="#copying-from-another-session-in-the-same-subject">Copying from another session in the same subject</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#re-registration">Re-registration</a></li>
-<li><a class="reference internal" href="#recommended-registration-workflow">Recommended registration workflow</a></li>
 </ul>
 </li>
 </ul>
