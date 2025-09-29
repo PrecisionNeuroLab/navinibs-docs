@@ -1,25 +1,26 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="../">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="NaviNIBS.Devices.ToolPositionsClient module" href="NaviNIBS.Devices.ToolPositionsClient.html" /><link rel="prev" title="NaviNIBS.Devices package" href="NaviNIBS.Devices.html" />
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="NaviNIBS.Devices.ToolPositionsClient module" href="NaviNIBS.Devices.ToolPositionsClient.html"><link rel="prev" title="NaviNIBS.Devices package" href="NaviNIBS.Devices.html">
+        <link rel="prefetch" href="../_static/NaviNIBSIcon.svg" as="image">
 
-    <link rel="shortcut icon" href="../_static/NaviNIBSIcon.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+    <link rel="shortcut icon" href="../_static/NaviNIBSIcon.ico"><!-- Generated with Sphinx 7.3.7 and Furo 2025.09.25 -->
         <title>NaviNIBS.Devices.IGTLinkToolPositionsServer module - NaviNIBS documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
     
 
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
@@ -90,19 +91,6 @@
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
   </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
   <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
     <title>Auto light/dark, in light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -143,7 +131,7 @@
       <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
       <path d="M13.5 6.5l4 4" />
       <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" /
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
   <symbol id="svg-eye" viewBox="0 0 24 24">
@@ -159,14 +147,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -176,8 +160,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -185,8 +168,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -194,8 +176,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -203,7 +184,6 @@
     <div class="sidebar-container">
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
-  
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../_static/NaviNIBSIcon.svg" alt="Logo"/>
   </div>
@@ -220,15 +200,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../featurecomparison.html">Feature comparison</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow.html">Workflow</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setup</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Setup</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setup</a><input aria-label="Toggle navigation of Setup" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/install.html">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup-ndi.html">NDI tracking setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup-optitrack.html">OptiTrack tracking setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/development.html">Development</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../core/index.html">Core features</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Core features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../core/SessionManagement.html">Session Management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../core/index.html">Core features</a><input aria-label="Toggle navigation of Core features" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../core/SessionManagement.html">Session management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../core/ToolConfiguration.html">Tool configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../core/MRI.html">MRI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../core/HeadModel.html">Head model</a></li>
@@ -240,7 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../core/ElectrodeDigitization.html">Electrode digitization</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../addons/index.html">Addons</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Addons</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../addons/index.html">Addons</a><input aria-label="Toggle navigation of Addons" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../addons/simulated-tools.html">Simulated tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../addons/cobot.html">Cobot control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../addons/lsl-output.html">LSL Output</a></li>
@@ -252,17 +232,17 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">Code</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Code</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="NaviNIBS.html">NaviNIBS package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of NaviNIBS package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current has-children"><a class="reference internal" href="NaviNIBS.Devices.html">NaviNIBS.Devices package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of NaviNIBS.Devices package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">Code</a><input aria-label="Toggle navigation of Code" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="NaviNIBS.html">NaviNIBS package</a><input aria-label="Toggle navigation of NaviNIBS package" checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="NaviNIBS.Devices.html">NaviNIBS.Devices package</a><input aria-label="Toggle navigation of NaviNIBS.Devices package" checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">NaviNIBS.Devices.IGTLinkToolPositionsServer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Devices.ToolPositionsClient.html">NaviNIBS.Devices.ToolPositionsClient module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Devices.ToolPositionsServer.html">NaviNIBS.Devices.ToolPositionsServer module</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.Navigator.html">NaviNIBS.Navigator package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.html">NaviNIBS.Navigator.GUI package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.html">NaviNIBS.Navigator.GUI.CollectionModels package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.CollectionModels package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.Navigator.html">NaviNIBS.Navigator package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator package" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.html">NaviNIBS.Navigator.GUI package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI package" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.html">NaviNIBS.Navigator.GUI.CollectionModels package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.CollectionModels package" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.DigitizedLocationsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.DigitizedLocationsTableModel module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.FiducialsTableModels.html">NaviNIBS.Navigator.GUI.CollectionModels.FiducialsTableModels module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.HeadPointsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.HeadPointsTableModel module</a></li>
@@ -272,16 +252,16 @@
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.CollectionModels.ToolsTableModel.html">NaviNIBS.Navigator.GUI.CollectionModels.ToolsTableModel module</a></li>
 </ul>
 </li>
-<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.html">NaviNIBS.Navigator.GUI.EditWindows package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.EditWindows package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.html">NaviNIBS.Navigator.GUI.EditWindows package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.EditWindows package" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.CoilCalibrationWindow module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.ImportSessionWindow.html">NaviNIBS.Navigator.GUI.EditWindows.ImportSessionWindow module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.PointerCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.PointerCalibrationWindow module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow.html">NaviNIBS.Navigator.GUI.EditWindows.ToolCalibrationWindow module</a></li>
 </ul>
 </li>
-<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.html">NaviNIBS.Navigator.GUI.ViewPanels package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l7 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.html">NaviNIBS.Navigator.GUI.ViewPanels package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels package" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel package" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l7 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers package" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.MeshSurfaceLayer.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.MeshSurfaceLayer module</a></li>
 <li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.OrientationsLayers.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.OrientationsLayers module</a></li>
 <li class="toctree-l8"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.PlotLayersGroup.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.ViewLayers.PlotLayersGroup module</a></li>
@@ -296,7 +276,7 @@
 <li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView.html">NaviNIBS.Navigator.GUI.ViewPanels.NavigatePanel.NavigationView module</a></li>
 </ul>
 </li>
-<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel package" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.HotkeyTriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.HotkeyTriggerSourceSettingsWidget module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.LSLTriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.LSLTriggerSourceSettingsWidget module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.TriggerSourceSettingsWidget.html">NaviNIBS.Navigator.GUI.ViewPanels.TriggerSettingsPanel.TriggerSourceSettingsWidget module</a></li>
@@ -315,7 +295,7 @@
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel.html">NaviNIBS.Navigator.GUI.ViewPanels.ToolsPanel module</a></li>
 </ul>
 </li>
-<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.html">NaviNIBS.Navigator.GUI.Widgets package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.GUI.Widgets package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.html">NaviNIBS.Navigator.GUI.Widgets package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.GUI.Widgets package" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.CollectionTableWidget.html">NaviNIBS.Navigator.GUI.Widgets.CollectionTableWidget module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.EditGridWidget.html">NaviNIBS.Navigator.GUI.Widgets.EditGridWidget module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.Navigator.GUI.Widgets.EditTargetWidget.html">NaviNIBS.Navigator.GUI.Widgets.EditTargetWidget module</a></li>
@@ -327,7 +307,7 @@
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.GUI.NavigatorGUI.html">NaviNIBS.Navigator.GUI.NavigatorGUI module</a></li>
 </ul>
 </li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.Navigator.Model.html">NaviNIBS.Navigator.Model package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of NaviNIBS.Navigator.Model package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.Navigator.Model.html">NaviNIBS.Navigator.Model package</a><input aria-label="Toggle navigation of NaviNIBS.Navigator.Model package" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Addons.html">NaviNIBS.Navigator.Model.Addons module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.Calculations.html">NaviNIBS.Navigator.Model.Calculations module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.Navigator.Model.CoordinateSystems.html">NaviNIBS.Navigator.Model.CoordinateSystems module</a></li>
@@ -348,8 +328,8 @@
 <li class="toctree-l4"><a class="reference internal" href="NaviNIBS.Navigator.TargetingCoordinator.html">NaviNIBS.Navigator.TargetingCoordinator module</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.util.html">NaviNIBS.util package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of NaviNIBS.util package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.GUI.html">NaviNIBS.util.GUI package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.GUI package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="NaviNIBS.util.html">NaviNIBS.util package</a><input aria-label="Toggle navigation of NaviNIBS.util package" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.GUI.html">NaviNIBS.util.GUI package</a><input aria-label="Toggle navigation of NaviNIBS.util.GUI package" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.Dock.html">NaviNIBS.util.GUI.Dock module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.ErrorDialog.html">NaviNIBS.util.GUI.ErrorDialog module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.IconWidget.html">NaviNIBS.util.GUI.IconWidget module</a></li>
@@ -366,16 +346,17 @@
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QValidators.html">NaviNIBS.util.GUI.QValidators module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QWidgetWithCloseSignal.html">NaviNIBS.util.GUI.QWidgetWithCloseSignal module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.QueuedRedrawMixin.html">NaviNIBS.util.GUI.QueuedRedrawMixin module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.SpatialTransformWidget.html">NaviNIBS.util.GUI.SpatialTransformWidget module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.GUI.StyleSheets.html">NaviNIBS.util.GUI.StyleSheets module</a></li>
 </ul>
 </li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.lsl.html">NaviNIBS.util.lsl package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.lsl package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.lsl.html">NaviNIBS.util.lsl package</a><input aria-label="Toggle navigation of NaviNIBS.util.lsl package" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.lsl.LSLStreamResolver.html">NaviNIBS.util.lsl.LSLStreamResolver module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="NaviNIBS.util.lsl.LSLStreamSelector.html">NaviNIBS.util.lsl.LSLStreamSelector module</a></li>
 </ul>
 </li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.html">NaviNIBS.util.pyvista package</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.pyvista package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.html">NaviNIBS.util.pyvista.RemotePlotting package</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of NaviNIBS.util.pyvista.RemotePlotting package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.html">NaviNIBS.util.pyvista package</a><input aria-label="Toggle navigation of NaviNIBS.util.pyvista package" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.html">NaviNIBS.util.pyvista.RemotePlotting package</a><input aria-label="Toggle navigation of NaviNIBS.util.pyvista.RemotePlotting package" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotter.html">NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotter module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies.html">NaviNIBS.util.pyvista.RemotePlotting.RemoteLayeredPlotterProxies module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter.html">NaviNIBS.util.pyvista.RemotePlotting.RemotePlotter module</a></li>
@@ -437,8 +418,7 @@
   </a>
 </div>
 <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -446,8 +426,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -476,12 +455,12 @@ But this provides other clients a connection-agnostic async interface for receiv
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlHostname">
-<span class="sig-name descname"><span class="pre">_igtlHostname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlHostname" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_igtlHostname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlHostname" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlPort">
-<span class="sig-name descname"><span class="pre">_igtlPort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlPort" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_igtlPort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#NaviNIBS.Devices.IGTLinkToolPositionsServer.IGTLinkToolPositionsServer._igtlPort" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -569,7 +548,7 @@ But this provides other clients a connection-agnostic async interface for receiv
 </div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=6dbb43f8"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
